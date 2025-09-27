@@ -66,22 +66,23 @@
     <link rel="manifest" href="/manifest.json">
     <style>
         :root {
-            /* Blue and White Professional Color Palette */
-            --beige-bg: #F0F8FF;
-            --dark-blue: #1E3A8A;
+            /* Consistent Blue and Beige Palette */
+            --beige-bg: #F5F5DC; /* Soft beige background */
+            --dark-blue: #001F3F; /* Deep navy blue for accents */
+            --light-blue: #7A9CC6; /* Soft light blue for highlights */
             --pure-white: #FFFFFF;
-            --light-gray: #E1F5FE;
-            --dark-gold: #2563EB;
-            --text-primary: #1E293B;
-            --text-secondary: #475569;
-            --text-muted: #64748B;
+            --light-gray: #E0E0E0; /* Neutral gray for borders */
+            --text-primary: #333333; /* Dark text for readability */
+            --text-secondary: #555555;
+            --text-muted: #777777;
+            --accent-gold: #D4AF37; /* Subtle gold for highlights */
             
-            /* Blue Shadows */
-            --shadow-light: 0 2px 8px rgba(30, 58, 138, 0.1);
-            --shadow-medium: 0 4px 12px rgba(30, 58, 138, 0.15);
-            --shadow-card: 0 2px 4px rgba(30, 58, 138, 0.1);
+            /* Shadows */
+            --shadow-light: 0 2px 8px rgba(0, 31, 63, 0.1);
+            --shadow-medium: 0 4px 12px rgba(0, 31, 63, 0.15);
+            --shadow-card: 0 2px 4px rgba(0, 31, 63, 0.1);
             
-            /* Simple Transitions */
+            /* Transitions */
             --transition-fast: all 0.2s ease;
             --transition-normal: all 0.3s ease;
             
@@ -115,12 +116,12 @@
 
         /* Professional Header */
         .header {
-            background: var(--beige-bg);
-            border-bottom: 2px solid var(--light-gray);
+            background: var(--pure-white);
+            border-bottom: 1px solid var(--light-gray);
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: var(--shadow-medium);
+            box-shadow: var(--shadow-light);
         }
 
         .header-content {
@@ -187,13 +188,13 @@
 
         .mobile-menu-toggle {
             display: none;
-            background: var(--primary-gradient);
+            background: var(--dark-blue);
             border: none;
-            border-radius: var(--border-radius-md);
+            border-radius: var(--radius-medium);
             padding: 0.75rem;
             cursor: pointer;
             transition: var(--transition-normal);
-            box-shadow: var(--shadow-md);
+            box-shadow: var(--shadow-light);
             position: absolute;
             top: 1rem;
             left: 1rem;
@@ -201,7 +202,7 @@
 
         .mobile-menu-toggle:hover {
             transform: translateY(-2px);
-            box-shadow: var(--shadow-lg);
+            box-shadow: var(--shadow-medium);
         }
 
         .mobile-menu-toggle i {
@@ -216,7 +217,7 @@
             left: 0;
             width: 100%;
             height: 100vh;
-            background: rgba(28, 28, 28, 0.95);
+            background: rgba(0, 31, 63, 0.95);
             backdrop-filter: blur(20px);
             z-index: 2000;
             padding: 2rem;
@@ -234,13 +235,13 @@
             align-items: center;
             margin-bottom: 2rem;
             padding-bottom: 1rem;
-            border-bottom: 1px solid var(--accent-color);
+            border-bottom: 1px solid var(--light-blue);
         }
 
         .mobile-nav-close {
-            background: var(--primary-gradient);
+            background: var(--dark-blue);
             border: none;
-            border-radius: var(--border-radius-md);
+            border-radius: var(--radius-medium);
             padding: 0.75rem;
             cursor: pointer;
             transition: var(--transition-normal);
@@ -258,20 +259,20 @@
         }
 
         .mobile-nav-item {
-            background: var(--light-gradient);
-            border-radius: var(--border-radius-lg);
+            background: var(--pure-white);
+            border-radius: var(--radius-large);
             padding: 1rem;
-            border: 1px solid var(--bg-tertiary);
+            border: 1px solid var(--light-gray);
             transition: var(--transition-normal);
         }
 
         .mobile-nav-item:hover {
-            background: var(--primary-gradient);
+            background: var(--light-blue);
             transform: translateX(4px);
         }
 
         .mobile-nav-item:hover a {
-            color: white;
+            color: var(--pure-white);
         }
 
         .mobile-nav-item a {
@@ -285,7 +286,7 @@
         }
 
         .mobile-nav-item i {
-            color: var(--primary-color);
+            color: var(--dark-blue);
             font-size: 1.125rem;
             min-width: 1.5rem;
         }
@@ -306,7 +307,7 @@
             font-size: 1.8rem;
             color: var(--pure-white);
             font-weight: 800;
-            box-shadow: 0 8px 20px rgba(30, 58, 138, 0.4), 0 4px 8px var(--beige-bg);
+            box-shadow: 0 8px 20px rgba(0, 31, 63, 0.4), 0 4px 8px var(--beige-bg);
             transition: var(--transition-fast);
             cursor: pointer;
             border: 3px solid var(--dark-blue);
@@ -321,7 +322,7 @@
             left: -3px;
             right: -3px;
             bottom: -3px;
-            background: linear-gradient(45deg, var(--dark-blue), #3B82F6, var(--dark-blue));
+            background: linear-gradient(45deg, var(--dark-blue), var(--light-blue), var(--dark-blue));
             border-radius: var(--radius-medium);
             z-index: -1;
             opacity: 0.8;
@@ -339,7 +340,7 @@
         }
 
         .logo:hover {
-            border-color: var(--dark-blue);
+            border-color: var(--light-blue);
             transform: translateY(-2px);
         }
 
@@ -420,10 +421,9 @@
             border-radius: var(--radius-small);
         }
 
-        /* Team Section - Moved to top */
+        /* Team Section */
         .team-section {
-            background: var(--dark-blue);
-            border-bottom: 1px solid var(--light-gray);
+            background: var(--pure-white);
             padding: 4rem 0;
         }
 
@@ -434,11 +434,11 @@
         }
 
         .team-category {
-            background: var(--pure-white);
+            background: var(--beige-bg);
             border-radius: var(--radius-large);
             padding: 2.5rem;
             box-shadow: var(--shadow-medium);
-            border: 2px solid var(--light-gray);
+            border: 1px solid var(--light-gray);
             transition: var(--transition-normal);
             position: relative;
             overflow: hidden;
@@ -451,13 +451,13 @@
             left: 0;
             right: 0;
             height: 4px;
-            background: linear-gradient(45deg, var(--dark-blue), #3B82F6);
+            background: linear-gradient(45deg, var(--dark-blue), var(--light-blue));
             border-radius: var(--radius-large) var(--radius-large) 0 0;
         }
 
         .team-category:hover {
             transform: translateY(-8px);
-            box-shadow: var(--shadow-medium), 0 20px 50px rgba(30, 58, 138, 0.2);
+            box-shadow: var(--shadow-medium), 0 20px 50px rgba(0, 31, 63, 0.2);
             border-color: var(--dark-blue);
         }
 
@@ -506,12 +506,12 @@
         }
 
         .field-card {
-            background: var(--beige-bg);
+            background: var(--pure-white);
             border-radius: var(--radius-large);
             padding: 3rem;
             margin-bottom: 3rem;
             box-shadow: var(--shadow-light);
-            border: 2px solid var(--pure-white);
+            border: 1px solid var(--light-gray);
             transition: var(--transition-normal);
             position: relative;
             overflow: hidden;
@@ -530,14 +530,8 @@
             left: 0;
             right: 0;
             height: 6px;
-            background: linear-gradient(45deg, var(--dark-blue), #3B82F6);
+            background: linear-gradient(45deg, var(--dark-blue), var(--light-blue));
             border-radius: var(--radius-large) var(--radius-large) 0 0;
-        }
-
-        .field-card:hover {
-            transform: translateY(-8px);
-            box-shadow: var(--shadow-medium), 0 25px 60px rgba(30, 58, 138, 0.2);
-            border-color: var(--dark-blue);
         }
 
         .field-title {
@@ -556,8 +550,8 @@
         }
 
         .status-badge {
-            background: linear-gradient(135deg, #10B981, #059669);
-            color: white;
+            background: linear-gradient(135deg, var(--light-blue), var(--dark-blue));
+            color: var(--pure-white);
             padding: 0.5rem 1rem;
             border-radius: 25px;
             font-size: 0.875rem;
@@ -567,16 +561,16 @@
         }
 
         .course-category {
-            background: rgba(30, 58, 138, 0.05);
+            background: var(--beige-bg);
             border-radius: 15px;
             padding: 2rem;
             margin-bottom: 1.5rem;
-            border: 1px solid rgba(30, 58, 138, 0.2);
+            border: 1px solid var(--light-gray);
             transition: var(--transition-normal);
         }
 
         .course-category:hover {
-            background: rgba(30, 58, 138, 0.1);
+            background: var(--light-gray);
             transform: translateY(-2px);
             border-color: var(--dark-blue);
         }
@@ -604,7 +598,7 @@
 
         .course-list li:hover {
             padding-right: 1rem;
-            background: rgba(30, 58, 138, 0.1);
+            background: var(--light-gray);
             margin: 0 -1rem;
             padding-left: 1rem;
             border-radius: 10px;
@@ -638,7 +632,7 @@
             border-radius: var(--radius-large);
             padding: 2.5rem;
             box-shadow: var(--shadow-light);
-            border: 2px solid var(--pure-white);
+            border: 1px solid var(--light-gray);
             transition: var(--transition-normal);
             position: relative;
             overflow: hidden;
@@ -657,12 +651,7 @@
             left: 0;
             right: 0;
             height: 4px;
-            background: linear-gradient(45deg, var(--dark-blue), #3B82F6);
-        }
-
-        .school-card:hover {
-            transform: translateY(-4px);
-            box-shadow: var(--shadow-xl);
+            background: linear-gradient(45deg, var(--dark-blue), var(--light-blue));
         }
 
         .school-name {
@@ -698,7 +687,7 @@
 
         .majors-list li:before {
             content: "●";
-            color: var(--primary-color);
+            color: var(--dark-blue);
             position: absolute;
             right: 0;
             font-size: 0.75rem;
@@ -706,7 +695,7 @@
 
         /* Resources Section */
         .resources-section {
-            background: var(--bg-secondary);
+            background: var(--light-gray);
         }
 
         .resources-grid {
@@ -716,11 +705,11 @@
         }
 
         .resource-category {
-            background: var(--beige-bg);
+            background: var(--pure-white);
             border-radius: var(--radius-large);
             padding: 2.5rem;
             box-shadow: var(--shadow-light);
-            border: 2px solid var(--pure-white);
+            border: 1px solid var(--light-gray);
             transition: var(--transition-normal);
             position: relative;
             overflow: hidden;
@@ -739,12 +728,7 @@
             left: 0;
             right: 0;
             height: 4px;
-            background: var(--secondary-gradient);
-        }
-
-        .resource-category:hover {
-            transform: translateY(-4px);
-            box-shadow: var(--shadow-xl);
+            background: linear-gradient(45deg, var(--dark-blue), var(--light-blue));
         }
 
         .category-header {
@@ -753,12 +737,12 @@
             gap: 1rem;
             margin-bottom: 2rem;
             padding-bottom: 1rem;
-            border-bottom: 2px solid var(--bg-tertiary);
+            border-bottom: 1px solid var(--light-gray);
         }
 
         .category-header i {
             font-size: 1.5rem;
-            color: var(--primary-color);
+            color: var(--dark-blue);
         }
 
         .category-header h4 {
@@ -778,21 +762,21 @@
             align-items: flex-start;
             gap: 1rem;
             padding: 1.5rem;
-            background: var(--bg-secondary);
-            border-radius: var(--border-radius-xl);
+            background: var(--beige-bg);
+            border-radius: var(--radius-large);
             transition: var(--transition-normal);
-            border: 1px solid var(--bg-tertiary);
+            border: 1px solid var(--light-gray);
         }
 
         .resource-item:hover {
-            background: var(--bg-tertiary);
+            background: var(--light-gray);
             transform: translateX(-4px);
-            box-shadow: var(--shadow-md);
+            box-shadow: var(--shadow-medium);
         }
 
         .resource-item i {
             font-size: 1.25rem;
-            color: var(--primary-color);
+            color: var(--dark-blue);
             margin-top: 0.25rem;
             min-width: 1.5rem;
         }
@@ -817,7 +801,7 @@
         }
 
         .resource-info a {
-            color: var(--primary-color);
+            color: var(--dark-blue);
             text-decoration: none;
             font-weight: 600;
             transition: var(--transition-fast);
@@ -825,12 +809,12 @@
         }
 
         .resource-info a:hover {
-            color: var(--secondary-color);
+            color: var(--light-blue);
         }
 
         /* Support Section */
         .support-section {
-            background: var(--bg-primary);
+            background: var(--pure-white);
         }
 
         .support-grid {
@@ -840,12 +824,12 @@
         }
 
         .support-card {
-            background: var(--bg-primary);
-            border-radius: var(--border-radius-2xl);
+            background: var(--beige-bg);
+            border-radius: var(--radius-large);
             padding: 2.5rem;
             text-align: center;
-            box-shadow: var(--shadow-lg);
-            border: 1px solid var(--bg-tertiary);
+            box-shadow: var(--shadow-light);
+            border: 1px solid var(--light-gray);
             transition: var(--transition-normal);
             position: relative;
             overflow: hidden;
@@ -858,12 +842,12 @@
             left: 0;
             right: 0;
             height: 4px;
-            background: var(--primary-gradient);
+            background: linear-gradient(45deg, var(--dark-blue), var(--light-blue));
         }
 
         .support-card:hover {
             transform: translateY(-4px);
-            box-shadow: var(--shadow-xl);
+            box-shadow: var(--shadow-medium);
         }
 
         .support-card h4 {
@@ -878,7 +862,7 @@
         }
 
         .support-card h4 i {
-            color: var(--primary-color);
+            color: var(--dark-blue);
         }
 
         .support-card p {
@@ -889,25 +873,26 @@
 
         .support-card a {
             display: inline-block;
-            background: var(--primary-gradient);
-            color: white;
+            background: var(--dark-blue);
+            color: var(--pure-white);
             padding: 0.75rem 1.5rem;
-            border-radius: var(--border-radius-lg);
+            border-radius: var(--radius-medium);
             text-decoration: none;
             font-weight: 600;
             transition: var(--transition-normal);
-            box-shadow: var(--shadow-md);
+            box-shadow: var(--shadow-light);
         }
 
         .support-card a:hover {
             transform: translateY(-2px);
-            box-shadow: var(--shadow-lg);
+            box-shadow: var(--shadow-medium);
+            background: var(--light-blue);
         }
 
         /* Footer */
         .footer {
-            background: var(--dark-gradient);
-            color: white;
+            background: var(--dark-blue);
+            color: var(--pure-white);
             padding: 3rem 0 2rem;
         }
 
@@ -919,7 +904,7 @@
         }
 
         .footer-section h4 {
-            color: var(--accent-color);
+            color: var(--light-blue);
             margin-bottom: 1rem;
             font-size: 1.125rem;
             font-weight: 700;
@@ -947,7 +932,7 @@
         }
 
         .footer-links a:hover {
-            color: var(--accent-color);
+            color: var(--light-blue);
         }
 
         .footer-bottom {
@@ -1099,43 +1084,40 @@
 
         /* Dark Mode Styles */
         body.dark-mode {
-            --beige-bg: #2C2C2C;
-            --pure-white: #1A1A1A;
+            --beige-bg: #1A1A1A;
+            --pure-white: #2C2C2C;
             --text-primary: #E0E0E0;
             --text-secondary: #B0B0B0;
             --text-muted: #808080;
             --light-gray: #404040;
+            --dark-blue: #7A9CC6; /* Inverted for readability */
+            --light-blue: #001F3F;
         }
 
         body.dark-mode .header {
-            background: #2C2C2C;
-            border-bottom-color: #404040;
+            background: var(--pure-white);
+            border-bottom-color: var(--light-gray);
         }
 
         body.dark-mode .hero {
-            background: #1A1A1A;
+            background: var(--dark-blue);
         }
 
         body.dark-mode .field-card,
         body.dark-mode .school-card,
         body.dark-mode .resource-category,
-        body.dark-mode .project-card,
-        body.dark-mode .challenge-card,
-        body.dark-mode .blog-card,
-        body.dark-mode .gallery-item,
-        body.dark-mode .event-card,
-        body.dark-mode .property-card {
-            background: #2C2C2C;
-            border-color: #404040;
-            color: #E0E0E0;
+        body.dark-mode .support-card {
+            background: var(--pure-white);
+            border-color: var(--light-gray);
+            color: var(--text-primary);
         }
 
         body.dark-mode .section {
-            background: #1A1A1A;
+            background: var(--beige-bg);
         }
 
         body.dark-mode .section-title {
-            color: #E0E0E0;
+            color: var(--text-primary);
         }
     </style>
 </head>
@@ -1178,8 +1160,8 @@
                     <i class="fas fa-graduation-cap"></i>
                 </div>
                 <div>
-                    <h3 style="color: var(--primary-color); margin: 0; font-size: 1.25rem;">فن‌آموز زرین</h3>
-                    <p style="color: var(--accent-color); margin: 0; font-size: 0.875rem;">منوی اصلی</p>
+                    <h3 style="color: var(--light-blue); margin: 0; font-size: 1.25rem;">فن‌آموز زرین</h3>
+                    <p style="color: var(--accent-gold); margin: 0; font-size: 0.875rem;">منوی اصلی</p>
                 </div>
             </div>
             <button class="mobile-nav-close" onclick="toggleMobileMenu()">
@@ -1257,116 +1239,111 @@
     </section>
 
 
-
-
-
-
-
     <!-- Special Features Section -->
-    <section class="section" style="background: var(--matte-black); border-bottom: 1px solid var(--glass-border);">
+    <section class="section" style="background: var(--light-gray);">
         <div class="container">
-            <h3 class="section-title" style="color: white;">ویژگی‌های خاص مورد نیاز دانش‌آموزان</h3>
+            <h3 class="section-title">ویژگی‌های خاص مورد نیاز دانش‌آموزان</h3>
             <div class="resources-grid">
-                <div class="resource-category fade-in-up" style="background: rgba(0,0,0,0.8); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); color: white;">
-                    <div class="category-header" style="border-bottom: 2px solid rgba(255,255,255,0.2);">
-                        <i class="fas fa-star" style="color: white;"></i>
-                        <h4 style="color: white;">ابزارهای ضروری برنامه‌نویسی</h4>
+                <div class="resource-category fade-in-up">
+                    <div class="category-header">
+                        <i class="fas fa-star"></i>
+                        <h4>ابزارهای ضروری برنامه‌نویسی</h4>
                     </div>
                     <div class="resource-list">
-                        <div class="resource-item" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);">
-                            <i class="fas fa-code" style="color: #D4AF37;"></i>
+                        <div class="resource-item">
+                            <i class="fas fa-code"></i>
                             <div class="resource-info">
-                                <h5 style="color: white;">Visual Studio Code</h5>
-                                <p style="color: rgba(255,255,255,0.8);">محیط توسعه رایگان مایکروسافت با پشتیبانی کامل</p>
-                                <a href="https://code.visualstudio.com" target="_blank" rel="noopener noreferrer" style="color: white;">دانلود رسمی</a>
+                                <h5>Visual Studio Code</h5>
+                                <p>محیط توسعه رایگان مایکروسافت با پشتیبانی کامل</p>
+                                <a href="https://code.visualstudio.com" target="_blank" rel="noopener noreferrer">دانلود رسمی</a>
                             </div>
                         </div>
                         
-                        <div class="resource-item" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);">
-                            <i class="fas fa-database" style="color: white;"></i>
+                        <div class="resource-item">
+                            <i class="fas fa-database"></i>
                             <div class="resource-info">
-                                <h5 style="color: white;">XAMPP</h5>
-                                <p style="color: rgba(255,255,255,0.8);">سرور محلی Apache, MySQL, PHP برای تست پروژه‌ها</p>
-                                <a href="https://www.apachefriends.org" target="_blank" rel="noopener noreferrer" style="color: white;">دانلود رسمی</a>
+                                <h5>XAMPP</h5>
+                                <p>سرور محلی Apache, MySQL, PHP برای تست پروژه‌ها</p>
+                                <a href="https://www.apachefriends.org" target="_blank" rel="noopener noreferrer">دانلود رسمی</a>
                             </div>
                         </div>
                         
-                        <div class="resource-item" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);">
-                            <i class="fab fa-git-alt" style="color: white;"></i>
+                        <div class="resource-item">
+                            <i class="fab fa-git-alt"></i>
                             <div class="resource-info">
-                                <h5 style="color: white;">Git & GitHub Desktop</h5>
-                                <p style="color: rgba(255,255,255,0.8);">کنترل نسخه و مدیریت پروژه‌های گروهی</p>
-                                <a href="https://desktop.github.com" target="_blank" rel="noopener noreferrer" style="color: white;">دانلود GitHub Desktop</a>
+                                <h5>Git & GitHub Desktop</h5>
+                                <p>کنترل نسخه و مدیریت پروژه‌های گروهی</p>
+                                <a href="https://desktop.github.com" target="_blank" rel="noopener noreferrer">دانلود GitHub Desktop</a>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="resource-category fade-in-up" style="background: rgba(0,0,0,0.8); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); color: white;">
-                    <div class="category-header" style="border-bottom: 2px solid rgba(255,255,255,0.2);">
-                        <i class="fas fa-palette" style="color: white;"></i>
-                        <h4 style="color: white;">نرم‌افزارهای طراحی حرفه‌ای</h4>
+                <div class="resource-category fade-in-up">
+                    <div class="category-header">
+                        <i class="fas fa-palette"></i>
+                        <h4>نرم‌افزارهای طراحی حرفه‌ای</h4>
                     </div>
                     <div class="resource-list">
-                        <div class="resource-item" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);">
-                            <i class="fab fa-figma" style="color: white;"></i>
+                        <div class="resource-item">
+                            <i class="fab fa-figma"></i>
                             <div class="resource-info">
-                                <h5 style="color: white;">Figma</h5>
-                                <p style="color: rgba(255,255,255,0.8);">طراحی UI/UX آنلاین و همکاری تیمی</p>
-                                <a href="https://figma.com" target="_blank" rel="noopener noreferrer" style="color: white;">استفاده آنلاین</a>
+                                <h5>Figma</h5>
+                                <p>طراحی UI/UX آنلاین و همکاری تیمی</p>
+                                <a href="https://figma.com" target="_blank" rel="noopener noreferrer">استفاده آنلاین</a>
                             </div>
                         </div>
                         
-                        <div class="resource-item" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);">
-                            <i class="fas fa-paint-brush" style="color: white;"></i>
+                        <div class="resource-item">
+                            <i class="fas fa-paint-brush"></i>
                             <div class="resource-info">
-                                <h5 style="color: white;">Canva Pro</h5>
-                                <p style="color: rgba(255,255,255,0.8);">طراحی گرافیک آسان با قالب‌های آماده</p>
-                                <a href="https://canva.com" target="_blank" rel="noopener noreferrer" style="color: white;">شروع طراحی</a>
+                                <h5>Canva Pro</h5>
+                                <p>طراحی گرافیک آسان با قالب‌های آماده</p>
+                                <a href="https://canva.com" target="_blank" rel="noopener noreferrer">شروع طراحی</a>
                             </div>
                         </div>
                         
-                        <div class="resource-item" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);">
-                            <i class="fas fa-image" style="color: white;"></i>
+                        <div class="resource-item">
+                            <i class="fas fa-image"></i>
                             <div class="resource-info">
-                                <h5 style="color: white;">GIMP</h5>
-                                <p style="color: rgba(255,255,255,0.8);">ویرایش تصاویر رایگان و قدرتمند</p>
-                                <a href="https://gimp.org" target="_blank" rel="noopener noreferrer" style="color: white;">دانلود رایگان</a>
+                                <h5>GIMP</h5>
+                                <p>ویرایش تصاویر رایگان و قدرتمند</p>
+                                <a href="https://gimp.org" target="_blank" rel="noopener noreferrer">دانلود رایگان</a>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="resource-category fade-in-up" style="background: rgba(0,0,0,0.8); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); color: white;">
-                    <div class="category-header" style="border-bottom: 2px solid rgba(255,255,255,0.2);">
-                        <i class="fas fa-graduation-cap" style="color: white;"></i>
-                        <h4 style="color: white;">پلتفرم‌های یادگیری آنلاین</h4>
+                <div class="resource-category fade-in-up">
+                    <div class="category-header">
+                        <i class="fas fa-graduation-cap"></i>
+                        <h4>پلتفرم‌های یادگیری آنلاین</h4>
                     </div>
                     <div class="resource-list">
-                        <div class="resource-item" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);">
-                            <i class="fab fa-youtube" style="color: white;"></i>
+                        <div class="resource-item">
+                            <i class="fab fa-youtube"></i>
                             <div class="resource-info">
-                                <h5 style="color: white;">فری کد کمپ فارسی</h5>
-                                <p style="color: rgba(255,255,255,0.8);">آموزش‌های رایگان برنامه‌نویسی به زبان فارسی</p>
-                                <a href="https://freecodecamp.org" target="_blank" rel="noopener noreferrer" style="color: white;">شروع یادگیری</a>
+                                <h5>فری کد کمپ فارسی</h5>
+                                <p>آموزش‌های رایگان برنامه‌نویسی به زبان فارسی</p>
+                                <a href="https://freecodecamp.org" target="_blank" rel="noopener noreferrer">شروع یادگیری</a>
                             </div>
                         </div>
                         
-                        <div class="resource-item" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);">
-                            <i class="fas fa-laptop-code" style="color: white;"></i>
+                        <div class="resource-item">
+                            <i class="fas fa-laptop-code"></i>
                             <div class="resource-info">
-                                <h5 style="color: white;">کدکدمی</h5>
-                                <p style="color: rgba(255,255,255,0.8);">دوره‌های تعاملی برنامه‌نویسی با تمرین عملی</p>
-                                <a href="https://codecademy.com" target="_blank" rel="noopener noreferrer" style="color: white;">ثبت نام</a>
+                                <h5>کدکدمی</h5>
+                                <p>دوره‌های تعاملی برنامه‌نویسی با تمرین عملی</p>
+                                <a href="https://codecademy.com" target="_blank" rel="noopener noreferrer">ثبت نام</a>
                             </div>
                         </div>
                         
-                        <div class="resource-item" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);">
-                            <i class="fas fa-certificate" style="color: white;"></i>
+                        <div class="resource-item">
+                            <i class="fas fa-certificate"></i>
                             <div class="resource-info">
-                                <h5 style="color: white;">کورسرا</h5>
-                                <p style="color: rgba(255,255,255,0.8);">دوره‌های دانشگاهی با گواهینامه معتبر</p>
-                                <a href="https://coursera.org" target="_blank" rel="noopener noreferrer" style="color: white;">مشاهده دوره‌ها</a>
+                                <h5>کورسرا</h5>
+                                <p>دوره‌های دانشگاهی با گواهینامه معتبر</p>
+                                <a href="https://coursera.org" target="_blank" rel="noopener noreferrer">مشاهده دوره‌ها</a>
                             </div>
                         </div>
                     </div>
@@ -2187,7 +2164,7 @@
         <div class="container">
             <h3 class="section-title">بلاگ حرفه‌ای فن‌آموز زرین</h3>
             <div class="blog-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; margin-bottom: 4rem;">
-                <article class="blog-card" style="background: var(--beige-bg); border-radius: var(--radius-large); overflow: hidden; box-shadow: var(--shadow-light); border: 2px solid var(--pure-white); transition: var(--transition-normal);">
+                <article class="blog-card" style="background: var(--beige-bg); border-radius: var(--radius-large); overflow: hidden; box-shadow: var(--shadow-light); border: 1px solid var(--light-gray); transition: var(--transition-normal);">
                     <div style="background: var(--dark-blue); padding: 2rem; text-align: center;">
                         <i class="fas fa-code" style="font-size: 3rem; color: white; margin-bottom: 1rem;"></i>
                         <h4 style="color: white; font-size: 1.3rem; font-weight: 600; margin: 0;">چگونه برنامه‌نویس حرفه‌ای شویم</h4>
@@ -2237,7 +2214,7 @@
                     </div>
                 </article>
                 
-                <article class="blog-card" style="background: var(--beige-bg); border-radius: var(--radius-large); overflow: hidden; box-shadow: var(--shadow-light); border: 2px solid var(--pure-white); transition: var(--transition-normal);">
+                <article class="blog-card" style="background: var(--beige-bg); border-radius: var(--radius-large); overflow: hidden; box-shadow: var(--shadow-light); border: 1px solid var(--light-gray); transition: var(--transition-normal);">
                     <div style="background: var(--dark-blue); padding: 2rem; text-align: center;">
                         <i class="fas fa-tools" style="font-size: 3rem; color: white; margin-bottom: 1rem;"></i>
                         <h4 style="color: white; font-size: 1.3rem; font-weight: 600; margin: 0;">ابزارهای ضروری تولید محتوا ۲۰۲۵</h4>
@@ -2292,7 +2269,7 @@
                     </div>
                 </article>
                 
-                <article class="blog-card" style="background: var(--beige-bg); border-radius: var(--radius-large); overflow: hidden; box-shadow: var(--shadow-light); border: 2px solid var(--pure-white); transition: var(--transition-normal);">
+                <article class="blog-card" style="background: var(--beige-bg); border-radius: var(--radius-large); overflow: hidden; box-shadow: var(--shadow-light); border: 1px solid var(--light-gray); transition: var(--transition-normal);">
                     <div style="background: var(--dark-blue); padding: 2rem; text-align: center;">
                         <i class="fas fa-graduation-cap" style="font-size: 3rem; color: white; margin-bottom: 1rem;"></i>
                         <h4 style="color: white; font-size: 1.3rem; font-weight: 600; margin: 0;">آینده‌های شغلی فن‌آموزان</h4>
@@ -2353,8 +2330,6 @@
 
 
 
-
-
     <!-- Reports Section -->
     <section class="section resources-section">
         <div class="container">
@@ -2403,30 +2378,30 @@
         <div class="container">
             <h3 class="section-title">فرم ثبت نام</h3>
             <div style="max-width: 600px; margin: 0 auto;">
-                <form id="registrationForm" style="background: var(--pure-white); padding: 3rem; border-radius: 20px; box-shadow: var(--shadow-medium); border: 2px solid var(--dark-blue);">
+                <form id="registrationForm" style="background: var(--pure-white); padding: 3rem; border-radius: 20px; box-shadow: var(--shadow-medium); border: 1px solid var(--light-gray);">
                     <div style="margin-bottom: 2rem;">
                         <label style="display: block; margin-bottom: 0.5rem; color: var(--text-primary); font-weight: 600;">نام:</label>
-                        <input type="text" id="firstName" required style="width: 100%; padding: 1rem; border: 2px solid var(--light-gray); border-radius: 12px; font-size: 1rem; background: var(--beige-bg); color: var(--text-primary);">
+                        <input type="text" id="firstName" required style="width: 100%; padding: 1rem; border: 1px solid var(--light-gray); border-radius: 12px; font-size: 1rem; background: var(--beige-bg); color: var(--text-primary);">
                     </div>
                     
                     <div style="margin-bottom: 2rem;">
                         <label style="display: block; margin-bottom: 0.5rem; color: var(--text-primary); font-weight: 600;">نام خانوادگی:</label>
-                        <input type="text" id="lastName" required style="width: 100%; padding: 1rem; border: 2px solid var(--light-gray); border-radius: 12px; font-size: 1rem; background: var(--beige-bg); color: var(--text-primary);">
+                        <input type="text" id="lastName" required style="width: 100%; padding: 1rem; border: 1px solid var(--light-gray); border-radius: 12px; font-size: 1rem; background: var(--beige-bg); color: var(--text-primary);">
                     </div>
                     
                     <div style="margin-bottom: 2rem;">
                         <label style="display: block; margin-bottom: 0.5rem; color: var(--text-primary); font-weight: 600;">شماره تماس:</label>
-                        <input type="tel" id="phone" required style="width: 100%; padding: 1rem; border: 2px solid var(--light-gray); border-radius: 12px; font-size: 1rem; background: var(--beige-bg); color: var(--text-primary);">
+                        <input type="tel" id="phone" required style="width: 100%; padding: 1rem; border: 1px solid var(--light-gray); border-radius: 12px; font-size: 1rem; background: var(--beige-bg); color: var(--text-primary);">
                     </div>
                     
                     <div style="margin-bottom: 2rem;">
                         <label style="display: block; margin-bottom: 0.5rem; color: var(--text-primary); font-weight: 600;">ایمیل:</label>
-                        <input type="email" id="email" required style="width: 100%; padding: 1rem; border: 2px solid var(--light-gray); border-radius: 12px; font-size: 1rem; background: var(--beige-bg); color: var(--text-primary);">
+                        <input type="email" id="email" required style="width: 100%; padding: 1rem; border: 1px solid var(--light-gray); border-radius: 12px; font-size: 1rem; background: var(--beige-bg); color: var(--text-primary);">
                     </div>
                     
                     <div style="margin-bottom: 2rem;">
                         <label style="display: block; margin-bottom: 0.5rem; color: var(--text-primary); font-weight: 600;">پیام:</label>
-                        <textarea id="message" rows="4" style="width: 100%; padding: 1rem; border: 2px solid var(--light-gray); border-radius: 12px; font-size: 1rem; background: var(--beige-bg); color: var(--text-primary); resize: vertical;"></textarea>
+                        <textarea id="message" rows="4" style="width: 100%; padding: 1rem; border: 1px solid var(--light-gray); border-radius: 12px; font-size: 1rem; background: var(--beige-bg); color: var(--text-primary); resize: vertical;"></textarea>
                     </div>
                     
                     <button type="submit" style="width: 100%; padding: 1.25rem; background: var(--dark-blue); color: white; border: none; border-radius: 12px; font-size: 1.1rem; font-weight: 600; cursor: pointer; transition: var(--transition-fast); box-shadow: var(--shadow-medium);">
@@ -2441,20 +2416,20 @@
     </section>
 
     <!-- AI Assistant Section -->
-    <section class="section" style="background: rgba(0,0,0,0.9); backdrop-filter: blur(10px); padding: 4rem 0;">
+    <section class="section" style="background: var(--dark-blue); padding: 4rem 0;">
         <div class="container">
             <h3 class="section-title" style="color: white;">دستیار هوش مصنوعی زرین</h3>
             <div style="max-width: 800px; margin: 0 auto;">
-                <div id="chatContainer" style="background: rgba(255,255,255,0.1); border-radius: 20px; padding: 2rem; border: 2px solid rgba(255,255,255,0.2); backdrop-filter: blur(10px);">
-                    <div id="chatMessages" style="height: 400px; overflow-y: auto; margin-bottom: 1rem; padding: 1rem; background: rgba(0,0,0,0.3); border-radius: 15px; border: 1px solid rgba(255,255,255,0.2);">
-                        <div class="ai-message" style="background: rgba(255,255,255,0.9); color: black; padding: 1rem; border-radius: 15px; margin-bottom: 1rem; max-width: 80%; border: 2px solid rgba(255,255,255,0.3);">
+                <div id="chatContainer" style="background: var(--pure-white); border-radius: 20px; padding: 2rem; border: 1px solid var(--light-gray);">
+                    <div id="chatMessages" style="height: 400px; overflow-y: auto; margin-bottom: 1rem; padding: 1rem; background: var(--beige-bg); border-radius: 15px; border: 1px solid var(--light-gray);">
+                        <div class="ai-message" style="background: var(--pure-white); color: var(--text-primary); padding: 1rem; border-radius: 15px; margin-bottom: 1rem; max-width: 80%; border: 1px solid var(--light-gray);">
                             <strong>دستیار زرین:</strong> سلام! من دستیار هوش مصنوعی فن‌آموز زرین هستم. می‌تونم در مورد رشته‌های تخصصی، منابع آموزشی، هنرستان‌ها و هر سوال دیگه‌ای راهنماییتون کنم. چطور می‌تونم کمکتون کنم؟
                         </div>
                     </div>
                     
                     <div style="display: flex; gap: 1rem;">
-                        <input type="text" id="userInput" placeholder="سوال خود را بپرسید..." style="flex: 1; padding: 1rem; border: 2px solid rgba(255,255,255,0.3); border-radius: 12px; font-size: 1rem; background: rgba(255,255,255,0.9); color: black;">
-                        <button id="sendButton" style="padding: 1rem 2rem; background: rgba(255,255,255,0.9); color: black; border: none; border-radius: 12px; font-weight: 600; cursor: pointer; transition: var(--transition-fast); border: 2px solid rgba(255,255,255,0.3);">
+                        <input type="text" id="userInput" placeholder="سوال خود را بپرسید..." style="flex: 1; padding: 1rem; border: 1px solid var(--light-gray); border-radius: 12px; font-size: 1rem; background: var(--pure-white); color: var(--text-primary);">
+                        <button id="sendButton" style="padding: 1rem 2rem; background: var(--dark-blue); color: white; border: none; border-radius: 12px; font-weight: 600; cursor: pointer; transition: var(--transition-fast);">
                             <i class="fas fa-paper-plane"></i>
                         </button>
                     </div>
@@ -2468,28 +2443,22 @@
         <div class="container">
             <h3 class="section-title">مرکز پشتیبانی و ارتباطات</h3>
             <div class="support-grid">
-                <div class="support-card slide-in-left" style="background: var(--pure-white); color: var(--text-primary); border: 2px solid var(--dark-blue);">
+                <div class="support-card slide-in-left">
                     <h4><i class="fab fa-whatsapp" style="color: #25D366;"></i> پشتیبانی واتساپ</h4>
                     <p>ارتباط مستقیم و سریع با تیم پشتیبانی فنی از طریق واتساپ</p>
-                    <a href="https://wa.me/989372565994?text=سلام%20وقت%20بخیر" target="_blank" rel="noopener noreferrer" style="background: var(--dark-blue); color: white;">
-                        شروع گفتگو
-                    </a>
+                    <a href="https://wa.me/989372565994?text=سلام%20وقت%20بخیر" target="_blank" rel="noopener noreferrer">شروع گفتگو</a>
                 </div>
 
-                <div class="support-card slide-in-right" style="background: var(--dark-blue); color: white; border: 2px solid var(--pure-white);">
+                <div class="support-card slide-in-right">
                     <h4><i class="fab fa-telegram" style="color: #0088cc;"></i> کانال تلگرام</h4>
                     <p>عضویت در کانال رسمی فن آموز زرین برای دریافت آخرین اخبار و منابع</p>
-                    <a href="https://t.me/cszarindasht" target="_blank" rel="noopener noreferrer" style="background: var(--pure-white); color: var(--dark-blue);">
-                        عضویت در کانال
-                    </a>
+                    <a href="https://t.me/cszarindasht" target="_blank" rel="noopener noreferrer">عضویت در کانال</a>
                 </div>
 
-                <div class="support-card slide-in-left" style="background: var(--beige-bg); color: var(--text-primary); border: 2px solid var(--dark-blue);">
+                <div class="support-card slide-in-left">
                     <h4><i class="fas fa-sms" style="color: var(--dark-blue);"></i> پیامک مستقیم</h4>
                     <p>ارسال پیامک برای دریافت اطلاعات سریع و پشتیبانی فوری</p>
-                    <a href="sms:09372565994" style="background: var(--dark-blue); color: white;">
-                        ارسال پیامک
-                    </a>
+                    <a href="sms:09372565994">ارسال پیامک</a>
                 </div>
             </div>
         </div>
@@ -2561,7 +2530,7 @@
                     <p>تولید محتوای آموزشی الکترونیکی</p>
                     <p>سیستم‌های هوشمند و AI</p>
                     <div style="margin-top: 1rem;">
-                        <h5 style="color: var(--accent-color); margin-bottom: 0.5rem;">کلمات کلیدی:</h5>
+                        <h5 style="color: var(--light-blue); margin-bottom: 0.5rem;">کلمات کلیدی:</h5>
                         <p style="font-size: 0.85rem; color: rgba(255,255,255,0.7); line-height: 1.4;">
                             آموزش کامپیوتر زرین‌دشت، دوره‌های فنی حرفه‌ای، یادگیری برنامه‌نویسی، PHP و MySQL، تولید محتوای دیجیتال
                         </p>
@@ -2571,7 +2540,7 @@
             
             <div class="footer-bottom">
                 <p>&copy; ۱۴۰۳ فن‌آموز زرین - استان فارس | طراحی و توسعه با ❤️ توسط تیم فن‌آموز زرین</p>
-                <p style="margin-top: 0.5rem; font-size: 0.875rem; color: var(--luxury-gold); text-shadow: 0 1px 2px rgba(0,0,0,0.3);">
+                <p style="margin-top: 0.5rem; font-size: 0.875rem; color: var(--light-blue); text-shadow: 0 1px 2px rgba(0,0,0,0.3);">
                     نویسنده: رعنا پرموزه | مدرسه والفجر<br>
                     جایی که دانش و تجربه با عشق به پرورش ترکیب می‌شوند ✨
                 </p>
@@ -2644,36 +2613,6 @@
             });
         });
 
-        // Project cards hover effects
-        document.querySelectorAll('.project-card').forEach(card => {
-            card.addEventListener('mouseenter', function() {
-                this.style.transform = 'translateY(-4px)';
-                this.style.borderColor = 'var(--dark-blue)';
-                this.style.boxShadow = 'var(--shadow-medium)';
-            });
-            
-            card.addEventListener('mouseleave', function() {
-                this.style.transform = 'translateY(0)';
-                this.style.borderColor = 'var(--pure-white)';
-                this.style.boxShadow = 'var(--shadow-light)';
-            });
-        });
-
-        // Challenge cards hover effects
-        document.querySelectorAll('.challenge-card').forEach(card => {
-            card.addEventListener('mouseenter', function() {
-                this.style.transform = 'translateY(-4px)';
-                this.style.borderColor = 'var(--dark-blue)';
-                this.style.boxShadow = 'var(--shadow-medium)';
-            });
-            
-            card.addEventListener('mouseleave', function() {
-                this.style.transform = 'translateY(0)';
-                this.style.borderColor = 'var(--pure-white)';
-                this.style.boxShadow = 'var(--shadow-light)';
-            });
-        });
-
         // Blog cards hover effects
         document.querySelectorAll('.blog-card').forEach(card => {
             card.addEventListener('mouseenter', function() {
@@ -2682,39 +2621,9 @@
                 this.style.boxShadow = 'var(--shadow-medium)';
             });
             
-            card.addEventListener('mouseleave', function() {
-                this.style.transform = 'translateY(0)';
-                this.style.borderColor = 'var(--pure-white)';
-                this.style.boxShadow = 'var(--shadow-light)';
-            });
-        });
-
-        // Gallery items hover effects
-        document.querySelectorAll('.gallery-item').forEach(item => {
-            item.addEventListener('mouseenter', function() {
-                this.style.transform = 'translateY(-4px)';
-                this.style.borderColor = 'var(--dark-blue)';
-                this.style.boxShadow = 'var(--shadow-medium)';
-            });
-            
             item.addEventListener('mouseleave', function() {
                 this.style.transform = 'translateY(0)';
                 this.style.borderColor = 'var(--light-gray)';
-                this.style.boxShadow = 'var(--shadow-light)';
-            });
-        });
-
-        // Event cards hover effects
-        document.querySelectorAll('.event-card').forEach(card => {
-            card.addEventListener('mouseenter', function() {
-                this.style.transform = 'translateY(-4px)';
-                this.style.borderColor = 'var(--dark-blue)';
-                this.style.boxShadow = 'var(--shadow-medium)';
-            });
-            
-            card.addEventListener('mouseleave', function() {
-                this.style.transform = 'translateY(0)';
-                this.style.borderColor = 'var(--pure-white)';
                 this.style.boxShadow = 'var(--shadow-light)';
             });
         });
@@ -2751,21 +2660,6 @@
             localStorage.setItem('darkMode', isDark);
         });
 
-        // Property cards hover effects
-        document.querySelectorAll('.property-card').forEach(card => {
-            card.addEventListener('mouseenter', function() {
-                this.style.transform = 'translateY(-4px)';
-                this.style.borderColor = 'var(--dark-blue)';
-                this.style.boxShadow = 'var(--shadow-medium)';
-            });
-            
-            card.addEventListener('mouseleave', function() {
-                this.style.transform = 'translateY(0)';
-                this.style.borderColor = 'var(--light-gray)';
-                this.style.boxShadow = 'var(--shadow-card)';
-            });
-        });
-
         // Registration form functionality
         document.getElementById('registrationForm').addEventListener('submit', function(e) {
             e.preventDefault();
@@ -2781,7 +2675,7 @@
             // Simple validation
             if (!firstName || !lastName || !phone || !email) {
                 formMessage.style.display = 'block';
-                formMessage.style.background = 'linear-gradient(135deg, #FF6B35 0%, #F7931E 100%)';
+                formMessage.style.background = '#FF6B35';
                 formMessage.style.color = 'white';
                 formMessage.innerHTML = '<i class="fas fa-exclamation-triangle"></i> لطفاً تمام فیلدهای ضروری را پر کنید.';
                 return;
@@ -2789,7 +2683,7 @@
             
             // Success message
             formMessage.style.display = 'block';
-            formMessage.style.background = 'var(--green-gradient)';
+            formMessage.style.background = '#10B981';
             formMessage.style.color = 'white';
             formMessage.innerHTML = '<i class="fas fa-check-circle"></i> ثبت نام شما با موفقیت انجام شد! به زودی با شما تماس خواهیم گرفت.';
             
@@ -2874,10 +2768,10 @@
             const messageDiv = document.createElement('div');
             
             if (isUser) {
-                messageDiv.style.cssText = 'background: rgba(255,255,255,0.8); color: black; padding: 1rem; border-radius: 15px; margin-bottom: 1rem; max-width: 80%; margin-right: auto; margin-left: 20%; text-align: right; border: 2px solid rgba(255,255,255,0.3);';
+                messageDiv.style.cssText = 'background: var(--light-gray); color: var(--text-primary); padding: 1rem; border-radius: 15px; margin-bottom: 1rem; max-width: 80%; margin-right: auto; margin-left: 20%; text-align: right; border: 1px solid var(--light-gray);';
                 messageDiv.innerHTML = `<strong>شما:</strong> ${message}`;
             } else {
-                messageDiv.style.cssText = 'background: rgba(255,255,255,0.9); color: black; padding: 1rem; border-radius: 15px; margin-bottom: 1rem; max-width: 80%; border: 2px solid rgba(255,255,255,0.3);';
+                messageDiv.style.cssText = 'background: var(--pure-white); color: var(--text-primary); padding: 1rem; border-radius: 15px; margin-bottom: 1rem; max-width: 80%; border: 1px solid var(--light-gray);';
                 messageDiv.innerHTML = `<strong>دستیار زرین:</strong> ${message}`;
             }
             
@@ -2918,5 +2812,5 @@
             document.getElementById(articleId + '-full').style.display = 'none';
         }
     </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'985b5758f3028cea',t:'MTc1ODk3OTY3NS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</body>
 </html>
