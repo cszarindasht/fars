@@ -3,1139 +3,2920 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>وبسایت گروه کامپیوتر زرین‌دشت</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- SEO Meta Tags -->
+    <title>فن‌آموز زرین - آموزش حرفه‌ای کامپیوتر در زرین‌دشت | دوره‌های فنی حرفه‌ای</title>
+    <meta name="description" content="منابع آموزشی معتبر برای دانش‌آموزان فنی، شامل برنامه‌نویسی وب، تولید محتوای دیجیتال و یادگیری برنامه‌نویسی برای دانش‌آموزان در زرین‌دشت استان فارس">
+    <meta name="keywords" content="آموزش کامپیوتر زرین‌دشت, دوره‌های فنی حرفه‌ای زرین‌دشت, یادگیری برنامه‌نویسی برای دانش‌آموزان, چگونه وبسایت حرفه‌ای با PHP و MySQL بسازیم, تولید محتوای آموزشی الکترونیکی, هنرستان کامپیوتر فارس">
+    <meta name="author" content="فن‌آموز زرین - استان فارس">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://fanamooz-zarin.ir">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="فن‌آموز زرین - آموزش حرفه‌ای کامپیوتر در زرین‌دشت">
+    <meta property="og:description" content="منابع آموزشی معتبر برای دانش‌آموزان فنی، شامل برنامه‌نویسی وب و تولید محتوای دیجیتال">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://fanamooz-zarin.ir">
+    <meta property="og:locale" content="fa_IR">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="فن‌آموز زرین - آموزش حرفه‌ای کامپیوتر">
+    <meta name="twitter:description" content="منابع آموزشی معتبر برای دانش‌آموزان فنی در زرین‌دشت">
+    
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "EducationalOrganization",
+      "name": "فن‌آموز زرین",
+      "description": "مرکز تخصصی آموزش فنی و حرفه‌ای در زرین‌دشت استان فارس",
+      "url": "https://fanamooz-zarin.ir",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "زرین‌دشت",
+        "addressRegion": "فارس",
+        "addressCountry": "ایران"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+98-937-256-5994",
+        "contactType": "customer service"
+      },
+      "sameAs": [
+        "https://t.me/cszarindasht"
+      ]
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Professional Iranian Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Performance Optimization -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+    <meta name="theme-color" content="#F5F5DC">
+    <meta name="msapplication-TileColor" content="#F5F5DC">
+    
+    <!-- Accessibility -->
+    <meta name="color-scheme" content="light dark">
+    <link rel="manifest" href="/manifest.json">
     <style>
-        body {
-            font-family: 'Vazirmatn', sans-serif;
-            background: linear-gradient(135deg, #003366 0%, #006699 100%);
-            color: #f0f0f0;
-            min-height: 100vh;
-            overflow-x: hidden;
-            perspective: 1000px;
+        :root {
+            /* Blue and White Professional Color Palette */
+            --beige-bg: #F0F8FF;
+            --dark-blue: #1E3A8A;
+            --pure-white: #FFFFFF;
+            --light-gray: #E1F5FE;
+            --dark-gold: #2563EB;
+            --text-primary: #1E293B;
+            --text-secondary: #475569;
+            --text-muted: #64748B;
+            
+            /* Blue Shadows */
+            --shadow-light: 0 2px 8px rgba(30, 58, 138, 0.1);
+            --shadow-medium: 0 4px 12px rgba(30, 58, 138, 0.15);
+            --shadow-card: 0 2px 4px rgba(30, 58, 138, 0.1);
+            
+            /* Simple Transitions */
+            --transition-fast: all 0.2s ease;
+            --transition-normal: all 0.3s ease;
+            
+            /* Border Radius */
+            --radius-small: 4px;
+            --radius-medium: 8px;
+            --radius-large: 12px;
+        }
+
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
-        
-        .glass-card {
-            background: rgba(0, 51, 102, 0.7);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border-radius: 15px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+
+        body {
+            font-family: 'Vazirmatn', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background: var(--beige-bg);
+            font-weight: 400;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            min-height: 100vh;
         }
-        
-        .meteor {
-            position: absolute;
-            width: 3px;
-            height: 3px;
-            background: #fff;
-            border-radius: 50%;
-            box-shadow: 0 0 5px 1px #fff;
-            animation: meteor-fall linear infinite;
-            opacity: 0;
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
         }
-        
-        @keyframes meteor-fall {
-            0% { transform: translateY(-100vh) translateX(0); opacity: 1; }
-            70% { opacity: 0.8; }
-            100% { transform: translateY(100vh) translateX(50px); opacity: 0; }
+
+        /* Professional Header */
+        .header {
+            background: var(--beige-bg);
+            border-bottom: 2px solid var(--light-gray);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow-medium);
         }
-        
-        .jelly-effect {
-            transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
-        }
-        
-        .active {
-            position: relative;
-        }
-        
-        .floating {
-            animation: floating 3s ease-in-out infinite;
-        }
-        
-        @keyframes floating {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-            100% { transform: translateY(0px); }
-        }
-        
-        .rotate-3d {
-            transform-style: preserve-3d;
-            transition: transform 0.5s;
-        }
-        
-        .rotate-3d:hover {
-            transform: rotateY(20deg);
-        }
-        
-        ::-webkit-scrollbar {
-            width: 6px;
-        }
-        
-        ::-webkit-scrollbar-track {
-            background: rgba(0, 102, 153, 0.1);
-        }
-        
-        ::-webkit-scrollbar-thumb {
-            background: rgba(0, 102, 153, 0.3);
-            border-radius: 4px;
-        }
-        
-        ::-webkit-scrollbar-thumb:hover {
-            background: rgba(0, 102, 153, 0.5);
-        }
-        
-        ::selection {
-            background: rgba(0, 204, 204, 0.5);
-            color: white;
-        }
-        
-        a, button {
-            transition: all 0.3s ease;
-        }
-        
-        .accordion-item {
-            margin-bottom: 8px;
-        }
-        
-        .accordion-header {
-            background: rgba(0, 51, 102, 0.9);
-            padding: 12px;
-            cursor: pointer;
-            border-radius: 8px;
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
             display: flex;
-            justify-content: space-between;
             align-items: center;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            color: #f0f0f0;
-            font-size: 14px;
+            justify-content: space-between;
         }
-        
-        .accordion-header:hover {
-            background: rgba(0, 51, 102, 0.7);
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            list-style: none;
         }
-        
-        .accordion-content {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease-out;
-            background: rgba(0, 51, 102, 0.5);
-            border-radius: 0 0 8px 8px;
-            color: #f0f0f0;
-            font-size: 13px;
-            padding: 0 12px;
-        }
-        
-        .accordion-content.show {
-            max-height: 400px;
-            padding: 12px;
-        }
-        
-        .course-link {
-            display: block;
-            padding: 8px;
-            margin: 4px 0;
-            background: rgba(0, 51, 102, 0.6);
-            border-radius: 6px;
-            transition: all 0.2s;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            color: #f0f0f0;
-            font-size: 13px;
+
+        .nav-menu a {
+            color: var(--text-primary);
             text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: var(--transition-fast);
+            padding: 0.5rem 0;
+            border-bottom: 2px solid transparent;
         }
-        
-        .course-link:hover {
-            background: rgba(0, 51, 102, 0.8);
-            transform: translateX(-5px);
+
+        .nav-menu a:hover {
+            color: var(--dark-blue);
+            border-bottom-color: var(--dark-blue);
         }
-        
-        .pdf-card {
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
+
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+            
+            .mobile-menu-toggle {
+                display: block;
+                background: var(--dark-blue);
+                border: none;
+                border-radius: var(--radius-small);
+                padding: 0.75rem;
+                cursor: pointer;
+                transition: var(--transition-fast);
+            }
+            
+            .mobile-menu-toggle i {
+                color: var(--pure-white);
+                font-size: 1rem;
+            }
         }
-        
-        .pdf-card:hover {
-            transform: translateY(-5px);
-            border-color: rgba(0, 204, 204, 0.5);
-        }
-        
-        .pdf-icon {
-            font-size: 2.5rem;
-            color: #00cccc;
-        }
-        
-        .whatsapp-btn {
-            background: #00cccc;
-            color: white;
-            transition: all 0.3s;
-            padding: 8px 16px;
-            font-size: 14px;
-        }
-        
-        .whatsapp-btn:hover {
-            background: #009999;
-            transform: scale(1.05);
-        }
-        
-        .telegram-btn {
-            background: #00cccc;
-            color: white;
-            transition: all 0.3s;
-            padding: 8px 16px;
-            font-size: 14px;
-        }
-        
-        .telegram-btn:hover {
-            background: #009999;
-            transform: scale(1.05);
-        }
-        
-        .sms-btn {
-            background: #00cccc;
-            color: white;
-            transition: all 0.3s;
-            padding: 8px 16px;
-            font-size: 14px;
-        }
-        
-        .sms-btn:hover {
-            background: #009999;
-            transform: scale(1.05);
-        }
-        
-        .hamburger {
+
+        .mobile-menu-toggle {
             display: none;
+        }
+
+        .header-main {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .mobile-menu-toggle {
+            display: none;
+            background: var(--primary-gradient);
+            border: none;
+            border-radius: var(--border-radius-md);
+            padding: 0.75rem;
             cursor: pointer;
-            z-index: 1001;
+            transition: var(--transition-normal);
+            box-shadow: var(--shadow-md);
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
         }
-        
-        .hamburger div {
-            width: 20px;
-            height: 2px;
-            background-color: #f0f0f0;
-            margin: 4px;
-            transition: all 0.3s ease;
+
+        .mobile-menu-toggle:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
         }
-        
-        .hamburger.active div:nth-child(1) {
-            transform: rotate(45deg) translate(5px, 5px);
+
+        .mobile-menu-toggle i {
+            color: white;
+            font-size: 1.25rem;
         }
-        
-        .hamburger.active div:nth-child(2) {
-            opacity: 0;
-        }
-        
-        .hamburger.active div:nth-child(3) {
-            transform: rotate(-45deg) translate(5px, -5px);
-        }
-        
-        .mobile-menu {
+
+        .mobile-nav {
             display: none;
             position: fixed;
             top: 0;
-            right: 0;
-            width: 70%;
+            left: 0;
+            width: 100%;
             height: 100vh;
-            background: rgba(0, 51, 102, 0.9);
-            z-index: 1000;
-            padding: 16px;
-            box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5);
-            transform: translateX(100%);
-            transition: transform 0.3s ease-in-out;
+            background: rgba(28, 28, 28, 0.95);
+            backdrop-filter: blur(20px);
+            z-index: 2000;
+            padding: 2rem;
+            overflow-y: auto;
         }
-        
-        .mobile-menu.active {
-            display: block;
-            transform: translateX(0);
-        }
-        
-        .mobile-menu a {
-            display: block;
-            padding: 12px;
-            color: #f0f0f0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-            font-size: 14px;
-        }
-        
-        .mobile-menu a:hover {
-            background: rgba(255, 255, 255, 0.1);
-        }
-        
-        .close-btn {
-            position: absolute;
-            top: 16px;
-            left: 16px;
-            font-size: 20px;
-            color: #f0f0f0;
-            cursor: pointer;
-            background: none;
-            border: none;
-        }
-        
-        .section-title {
-            color: #ffffff; /* تغییر از amber-800 به سفید */
-            position: relative;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-            font-size: 1.5rem;
-        }
-        
-        .section-title:after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            width: 80px;
-            height: 2px;
-            background: #ffffff; /* تغییر از amber-800 به سفید */
-        }
-        
-        /* Media Queries */
-        @media (max-width: 640px) { /* Mobile */
-            .hamburger { display: block; }
-            nav { display: none; }
-            .logo { width: 80px; height: auto; }
-            header .flex { flex-direction: column; text-align: center; }
-            header h1 { font-size: 1.5rem; }
-            header p { font-size: 0.9rem; }
-            section { padding: 10px; }
-            .glass-card { padding: 10px; border-radius: 10px; }
-            h2 { font-size: 1.5rem; }
-            p { font-size: 0.9rem; }
-            .accordion-header { font-size: 12px; padding: 8px; }
-            .accordion-content { font-size: 11px; padding: 8px; }
-            .course-link { font-size: 11px; padding: 6px; }
-            .pdf-icon { font-size: 2rem; }
-            .whatsapp-btn, .telegram-btn, .sms-btn { font-size: 12px; padding: 6px 12px; }
-            .mobile-menu { width: 80%; }
-            .grid-cols-1 { grid-template-columns: 1fr; }
-            .grid-cols-2 { grid-template-columns: 1fr; }
-            .grid-cols-3 { grid-template-columns: 1fr; }
-            .container { width: 100%; padding: 0 10px; }
-        }
-        
-        @media (min-width: 641px) and (max-width: 1024px) { /* Tablet */
-            .hamburger { display: block; }
-            nav { display: none; }
-            .logo { width: 100px; height: auto; }
-            header .flex { flex-direction: column; text-align: center; }
-            header h1 { font-size: 2rem; }
-            header p { font-size: 1rem; }
-            section { padding: 15px; }
-            .glass-card { padding: 12px; border-radius: 12px; }
-            h2 { font-size: 2rem; }
-            p { font-size: 1rem; }
-            .accordion-header { font-size: 13px; padding: 10px; }
-            .accordion-content { font-size: 12px; padding: 10px; }
-            .course-link { font-size: 12px; padding: 7px; }
-            .pdf-icon { font-size: 2.2rem; }
-            .whatsapp-btn, .telegram-btn, .sms-btn { font-size: 13px; padding: 7px 14px; }
-            .mobile-menu { width: 70%; }
-            .grid-cols-1 { grid-template-columns: 1fr; }
-            .grid-cols-2 { grid-template-columns: 1fr 1fr; }
-            .grid-cols-3 { grid-template-columns: 1fr 1fr; }
-            .container { width: 90%; padding: 0 20px; }
-        }
-        
-        @media (min-width: 1025px) { /* Desktop */
-            .hamburger { display: none; }
-            .logo { width: 120px; height: auto; }
-            header .flex { flex-direction: row; text-align: left; }
-            header h1 { font-size: 2.5rem; }
-            header p { font-size: 1.2rem; }
-            section { padding: 20px; }
-            .glass-card { padding: 15px; border-radius: 15px; }
-            h2 { font-size: 2.5rem; }
-            p { font-size: 1.1rem; }
-            .accordion-header { font-size: 14px; padding: 12px; }
-            .accordion-content { font-size: 13px; padding: 12px; }
-            .course-link { font-size: 13px; padding: 8px; }
-            .pdf-icon { font-size: 2.5rem; }
-            .whatsapp-btn, .telegram-btn, .sms-btn { font-size: 14px; padding: 8px 16px; }
-            .grid-cols-1 { grid-template-columns: 1fr; }
-            .grid-cols-2 { grid-template-columns: 1fr 1fr; }
-            .grid-cols-3 { grid-template-columns: 1fr 1fr 1fr; }
-            .container { width: 80%; max-width: 1200px; margin: 0 auto; padding: 0; }
-        }
-    </style>
-</head>
-<body class="relative">
-    <div id="meteors-container"></div>
-    
-    <!-- Floating objects -->
-    <div class="absolute top-20 left-10 w-16 h-16 rounded-full bg-blue-900 opacity-20 floating"></div>
-    <div class="absolute bottom-40 right-20 w-24 h-24 rounded-full bg-cyan-900 opacity-20 floating" style="animation-delay: 1s;"></div>
-    <div class="absolute top-1/3 right-1/4 w-20 h-20 rounded-full bg-indigo-900 opacity-20 floating" style="animation-delay: 2s;"></div>
-    
-    <!-- Mobile menu button -->
-    <div class="hamburger fixed top-4 right-4 z-50" id="hamburger">
-        <div></div>
-        <div></div>
-        <div></div>
-    </div>
-    
-    <!-- Mobile menu -->
-    <div class="mobile-menu" id="mobileMenu">
-        <button class="close-btn" id="closeMenu">
-            <i class="fas fa-times"></i>
-        </button>
-        <div class="mt-16">
-            <a href="#team" class="block text-lg px-4 py-2" onclick="navigateToSection('team')">اعضای گروه</a>
-            <a href="#schools" class="block text-lg px-4 py-2" onclick="navigateToSection('schools')">هنرستان‌های شهرستان</a>
-            <a href="#reports" class="block text-lg px-4 py-2" onclick="navigateToSection('reports')">گزارش عملکرد</a>
-            <a href="#resources" class="block text-lg px-4 py-2" onclick="navigateToSection('resources')">منابع آموزشی</a>
-            <a href="#support" class="block text-lg px-4 py-2" onclick="navigateToSection('support')">ارتباط با پشتیبانی</a>
-        </div>
-    </div>
 
-    <!-- Main container with jelly effect -->
-    <div id="main-container" class="min-h-screen flex flex-col">
-        <!-- Header -->
-        <header class="glass-card p-6 mx-4 mt-4">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="flex items-center mb-4 md:mb-0">
-                    <img src="logo.png" alt="لوگو" class="logo mr-3">
-                    <div>
-                        <h1 class="text-2xl font-bold text-white">گروه کامپیوتر زرین‌دشت</h1> <!-- تغییر از amber به سفید -->
-                        <p class="text-sm text-gray-300">استان فارس</p>
-                    </div>
-                </div>
-            </div>
-        </header>
-        
-        <!-- Hero Section -->
-        <section class="flex-grow flex items-center justify-center px-4 py-12">
-            <div class="glass-card p-8 max-w-4xl w-full text-center">
-                <h2 class="text-3xl md:text-4xl font-bold mb-6 text-white"> <!-- تغییر از amber به سفید -->
-                    وبسایت آموزشی گروه کامپیوتر زرین‌دشت
-                </h2>
-                <p class="text-lg mb-8 text-gray-400">
-                    این وب‌سایت به همت گروه آموزشی کامپیوتر شهرستان زرین‌دشت (استان فارس) و با هدف سامان‌دهی، آرشیو و تسهیل دسترسی هنرآموزان، هنرجویان، و مسئولان آموزشی به محتوای تخصصی دروس فنی‌وحرفه‌ای و کاردانش راه‌اندازی شده است
-                </p>
-                <div class="flex flex-wrap justify-center gap-4">
-                    <a href="#schools" class="px-6 py-3 bg-gradient-to-r from-blue-700 to-00cccc rounded-full font-medium text-white hover:opacity-90 transition">
-                        هنرستان‌های شهرستان
-                    </a>
-                    <a href="#resources" class="px-6 py-3 border border-00cccc rounded-full font-medium text-00cccc hover:bg-gray-800 transition">
-                        منابع آموزشی
-              <!DOCTYPE html>
-<html lang="fa" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>رشته‌های فعال</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        .glass-card {
-            background: rgba(0, 51, 102, 0.7);
-            backdrop-filter: blur(10px);
-            border-radius: 15px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
-            padding: 15px;
-            margin: 20px;
+        .mobile-nav.active {
+            display: block;
+            animation: fadeIn 0.3s ease;
         }
-        
-        .section-title {
-            position: relative;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-        }
-        
-        .section-title:after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            width: 80px;
-            height: 2px;
-            background: #f59e0b;
-        }
-        
-        .accordion-item {
-            margin-bottom: 8px;
-        }
-        
-        .accordion-header {
-            background: rgba(0, 51, 102, 0.9);
-            padding: 12px;
-            cursor: pointer;
-            border-radius: 8px;
+
+        .mobile-nav-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            color: #f0f0f0;
-            font-size: 14px;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--accent-color);
         }
-        
-        .accordion-header:hover {
-            background: rgba(0, 51, 102, 0.7);
+
+        .mobile-nav-close {
+            background: var(--primary-gradient);
+            border: none;
+            border-radius: var(--border-radius-md);
+            padding: 0.75rem;
+            cursor: pointer;
+            transition: var(--transition-normal);
         }
-        
-        .accordion-content {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease-out;
-            background: rgba(0, 51, 102, 0.5);
-            border-radius: 0 0 8px 8px;
-            color: #f0f0f0;
-            font-size: 13px;
-            padding: 0 12px;
+
+        .mobile-nav-close i {
+            color: white;
+            font-size: 1.25rem;
         }
-        
-        .accordion-content.show {
-            max-height: 400px;
-            padding: 12px;
+
+        .mobile-nav-menu {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
         }
-        
-        .course-link {
-            display: block;
-            padding: 8px;
-            margin: 4px 0;
-            background: rgba(0, 51, 102, 0.6);
-            border-radius: 6px;
-            transition: all 0.2s;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            color: #f0f0f0;
-            font-size: 13px;
+
+        .mobile-nav-item {
+            background: var(--light-gradient);
+            border-radius: var(--border-radius-lg);
+            padding: 1rem;
+            border: 1px solid var(--bg-tertiary);
+            transition: var(--transition-normal);
+        }
+
+        .mobile-nav-item:hover {
+            background: var(--primary-gradient);
+            transform: translateX(4px);
+        }
+
+        .mobile-nav-item:hover a {
+            color: white;
+        }
+
+        .mobile-nav-item a {
+            color: var(--text-primary);
             text-decoration: none;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            transition: var(--transition-fast);
+        }
+
+        .mobile-nav-item i {
+            color: var(--primary-color);
+            font-size: 1.125rem;
+            min-width: 1.5rem;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .logo {
+            width: 200px;
+            height: 80px;
+            background: var(--dark-blue);
+            border-radius: var(--radius-medium);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            color: var(--pure-white);
+            font-weight: 800;
+            box-shadow: 0 8px 20px rgba(30, 58, 138, 0.4), 0 4px 8px var(--beige-bg);
+            transition: var(--transition-fast);
+            cursor: pointer;
+            border: 3px solid var(--dark-blue);
+            animation: logoPopIn 0.4s ease-out;
+            position: relative;
         }
         
-        .course-link:hover {
-            background: rgba(0, 51, 102, 0.8);
-            transform: translateX(-5px);
+        .logo::before {
+            content: '';
+            position: absolute;
+            top: -3px;
+            left: -3px;
+            right: -3px;
+            bottom: -3px;
+            background: linear-gradient(45deg, var(--dark-blue), #3B82F6, var(--dark-blue));
+            border-radius: var(--radius-medium);
+            z-index: -1;
+            opacity: 0.8;
+        }
+
+        @keyframes logoPopIn {
+            0% { 
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            100% { 
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .logo:hover {
+            border-color: var(--dark-blue);
+            transform: translateY(-2px);
+        }
+
+        .header-text h1 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.25rem;
+        }
+
+        .header-text p {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            font-weight: 400;
+        }
+
+        /* Professional Hero Section */
+        .hero {
+            background: var(--dark-blue);
+            padding: 4rem 2rem;
+            text-align: center;
+            margin: 0;
+        }
+
+        .hero-content {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .hero h2 {
+            font-size: 2.5rem;
+            color: var(--pure-white);
+            margin-bottom: 1rem;
+            font-weight: 600;
+            line-height: 1.3;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+            font-weight: 400;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Modern Sections */
+        .section {
+            padding: 3rem 2rem;
+            margin: 2rem 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 2.5rem;
+            color: var(--text-primary);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -0.5rem;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: var(--dark-blue);
+            border-radius: var(--radius-small);
+        }
+
+        /* Team Section - Moved to top */
+        .team-section {
+            background: var(--dark-blue);
+            border-bottom: 1px solid var(--light-gray);
+            padding: 4rem 0;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .team-category {
+            background: var(--pure-white);
+            border-radius: var(--radius-large);
+            padding: 2.5rem;
+            box-shadow: var(--shadow-medium);
+            border: 2px solid var(--light-gray);
+            transition: var(--transition-normal);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .team-category::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(45deg, var(--dark-blue), #3B82F6);
+            border-radius: var(--radius-large) var(--radius-large) 0 0;
+        }
+
+        .team-category:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-medium), 0 20px 50px rgba(30, 58, 138, 0.2);
+            border-color: var(--dark-blue);
+        }
+
+        .team-category h4 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .team-category h4 i {
+            color: var(--dark-blue);
+            font-size: 1.25rem;
+        }
+
+        .team-list {
+            list-style: none;
+        }
+
+        .team-list li {
+            padding: 0.75rem 0;
+            font-size: 1rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+            border-bottom: 1px solid var(--light-gray);
+            transition: var(--transition-normal);
+        }
+
+        .team-list li:last-child {
+            border-bottom: none;
+        }
+
+        .team-list li:hover {
+            color: var(--dark-blue);
+            padding-right: 0.5rem;
+            transform: translateX(4px);
+        }
+
+        /* Fields Section */
+        .fields-section {
+            background: var(--light-gray);
+            padding: 4rem 0;
+        }
+
+        .field-card {
+            background: var(--beige-bg);
+            border-radius: var(--radius-large);
+            padding: 3rem;
+            margin-bottom: 3rem;
+            box-shadow: var(--shadow-light);
+            border: 2px solid var(--pure-white);
+            transition: var(--transition-normal);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .field-card:hover {
+            border-color: var(--dark-blue);
+            box-shadow: var(--shadow-medium);
+            transform: translateY(-4px);
+        }
+
+        .field-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: linear-gradient(45deg, var(--dark-blue), #3B82F6);
+            border-radius: var(--radius-large) var(--radius-large) 0 0;
+        }
+
+        .field-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-medium), 0 25px 60px rgba(30, 58, 138, 0.2);
+            border-color: var(--dark-blue);
+        }
+
+        .field-title {
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            color: var(--dark-blue);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .field-title i {
+            color: var(--dark-blue);
+            font-size: 1.5rem;
+        }
+
+        .status-badge {
+            background: linear-gradient(135deg, #10B981, #059669);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            box-shadow: var(--shadow-card);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .course-category {
+            background: rgba(30, 58, 138, 0.05);
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            border: 1px solid rgba(30, 58, 138, 0.2);
+            transition: var(--transition-normal);
+        }
+
+        .course-category:hover {
+            background: rgba(30, 58, 138, 0.1);
+            transform: translateY(-2px);
+            border-color: var(--dark-blue);
+        }
+
+        .course-category h4 {
+            margin: 0 0 1.5rem 0;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--dark-blue);
+        }
+
+        .course-list {
+            list-style: none;
+        }
+
+        .course-list li {
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--light-gray);
+            transition: var(--transition-normal);
+        }
+
+        .course-list li:last-child {
+            border-bottom: none;
+        }
+
+        .course-list li:hover {
+            padding-right: 1rem;
+            background: rgba(30, 58, 138, 0.1);
+            margin: 0 -1rem;
+            padding-left: 1rem;
+            border-radius: 10px;
+            transform: translateX(4px);
+        }
+
+        .course-list a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition-normal);
+        }
+
+        .course-list a:hover {
+            color: var(--dark-blue);
+        }
+
+        /* Schools Section */
+        .schools-section {
+            background: var(--pure-white);
+        }
+
+        .schools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+        }
+
+        .school-card {
+            background: var(--beige-bg);
+            border-radius: var(--radius-large);
+            padding: 2.5rem;
+            box-shadow: var(--shadow-light);
+            border: 2px solid var(--pure-white);
+            transition: var(--transition-normal);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .school-card:hover {
+            border-color: var(--dark-blue);
+            box-shadow: var(--shadow-medium);
+            transform: translateY(-4px);
+        }
+
+        .school-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(45deg, var(--dark-blue), #3B82F6);
+        }
+
+        .school-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .school-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 1.5rem;
+        }
+
+        .school-info {
+            margin-bottom: 1rem;
+            font-size: 1rem;
+            color: var(--text-secondary);
+        }
+
+        .school-info strong {
+            color: var(--dark-blue);
+            font-weight: 600;
+        }
+
+        .majors-list {
+            list-style: none;
+            margin: 1rem 0;
+        }
+
+        .majors-list li {
+            padding: 0.5rem 0;
+            padding-right: 1.5rem;
+            position: relative;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        .majors-list li:before {
+            content: "●";
+            color: var(--primary-color);
+            position: absolute;
+            right: 0;
+            font-size: 0.75rem;
+        }
+
+        /* Resources Section */
+        .resources-section {
+            background: var(--bg-secondary);
+        }
+
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 2rem;
+        }
+
+        .resource-category {
+            background: var(--beige-bg);
+            border-radius: var(--radius-large);
+            padding: 2.5rem;
+            box-shadow: var(--shadow-light);
+            border: 2px solid var(--pure-white);
+            transition: var(--transition-normal);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .resource-category:hover {
+            border-color: var(--dark-blue);
+            box-shadow: var(--shadow-medium);
+            transform: translateY(-4px);
+        }
+
+        .resource-category::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--secondary-gradient);
+        }
+
+        .resource-category:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .category-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--bg-tertiary);
+        }
+
+        .category-header i {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        .category-header h4 {
+            font-size: 1.25rem;
+            color: var(--text-primary);
+            font-weight: 700;
+        }
+
+        .resource-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .resource-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            padding: 1.5rem;
+            background: var(--bg-secondary);
+            border-radius: var(--border-radius-xl);
+            transition: var(--transition-normal);
+            border: 1px solid var(--bg-tertiary);
+        }
+
+        .resource-item:hover {
+            background: var(--bg-tertiary);
+            transform: translateX(-4px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .resource-item i {
+            font-size: 1.25rem;
+            color: var(--primary-color);
+            margin-top: 0.25rem;
+            min-width: 1.5rem;
+        }
+
+        .resource-info {
+            flex: 1;
+        }
+
+        .resource-info h5 {
+            margin: 0 0 0.5rem 0;
+            font-size: 1rem;
+            color: var(--text-primary);
+            font-weight: 600;
+            line-height: 1.4;
+        }
+
+        .resource-info p {
+            margin: 0.5rem 0;
+            color: var(--text-muted);
+            font-size: 0.875rem;
+            line-height: 1.4;
+        }
+
+        .resource-info a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition-fast);
+            font-size: 0.875rem;
+        }
+
+        .resource-info a:hover {
+            color: var(--secondary-color);
+        }
+
+        /* Support Section */
+        .support-section {
+            background: var(--bg-primary);
+        }
+
+        .support-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .support-card {
+            background: var(--bg-primary);
+            border-radius: var(--border-radius-2xl);
+            padding: 2.5rem;
+            text-align: center;
+            box-shadow: var(--shadow-lg);
+            border: 1px solid var(--bg-tertiary);
+            transition: var(--transition-normal);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .support-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--primary-gradient);
+        }
+
+        .support-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .support-card h4 {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+        }
+
+        .support-card h4 i {
+            color: var(--primary-color);
+        }
+
+        .support-card p {
+            margin-bottom: 1.5rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        .support-card a {
+            display: inline-block;
+            background: var(--primary-gradient);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: var(--border-radius-lg);
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition-normal);
+            box-shadow: var(--shadow-md);
+        }
+
+        .support-card a:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--dark-gradient);
+            color: white;
+            padding: 3rem 0 2rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h4 {
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+            font-size: 1.125rem;
+            font-weight: 700;
+        }
+
+        .footer-section p {
+            margin-bottom: 0.75rem;
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.6;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: var(--transition-fast);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-color);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 1.5rem;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-content {
+                padding: 1rem;
+                position: relative;
+            }
+
+            .header-main {
+                flex-direction: column;
+                text-align: center;
+                gap: 1rem;
+            }
+
+            .mobile-menu-toggle {
+                display: block;
+            }
+
+            .logo {
+                width: 6rem;
+                height: 6rem;
+                font-size: 2.5rem;
+            }
+
+            .header-text h1 {
+                font-size: 2rem;
+            }
+
+            .header-text p {
+                font-size: 1rem;
+            }
+
+            .hero {
+                padding: 4rem 0;
+            }
+
+            .hero h2 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.125rem;
+            }
+
+            .section {
+                padding: 3rem 0;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .field-title {
+                font-size: 1.5rem;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
+            }
+
+            .schools-grid,
+            .team-grid,
+            .resources-grid,
+            .support-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .resource-item {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .container {
+                padding: 0 1rem;
+            }
+        }
+
+        /* Loading Animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        /* Scroll animations */
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .slide-in-left {
+            animation: slideInLeft 0.8s ease-out;
+        }
+
+        .slide-in-right {
+            animation: slideInRight 0.8s ease-out;
+        }
+
+        /* Parallax Effect for Hero */
+        .hero-parallax {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            animation: parallaxMove 20s linear infinite;
+            z-index: 1;
+        }
+
+        @keyframes parallaxMove {
+            0% { transform: translateY(0px); }
+            100% { transform: translateY(-60px); }
+        }
+
+        /* Dark Mode Styles */
+        body.dark-mode {
+            --beige-bg: #2C2C2C;
+            --pure-white: #1A1A1A;
+            --text-primary: #E0E0E0;
+            --text-secondary: #B0B0B0;
+            --text-muted: #808080;
+            --light-gray: #404040;
+        }
+
+        body.dark-mode .header {
+            background: #2C2C2C;
+            border-bottom-color: #404040;
+        }
+
+        body.dark-mode .hero {
+            background: #1A1A1A;
+        }
+
+        body.dark-mode .field-card,
+        body.dark-mode .school-card,
+        body.dark-mode .resource-category,
+        body.dark-mode .project-card,
+        body.dark-mode .challenge-card,
+        body.dark-mode .blog-card,
+        body.dark-mode .gallery-item,
+        body.dark-mode .event-card,
+        body.dark-mode .property-card {
+            background: #2C2C2C;
+            border-color: #404040;
+            color: #E0E0E0;
+        }
+
+        body.dark-mode .section {
+            background: #1A1A1A;
+        }
+
+        body.dark-mode .section-title {
+            color: #E0E0E0;
         }
     </style>
 </head>
 <body>
-    <section id="fields" class="glass-card p-8 mx-4 my-8">
-        <h2 class="text-2xl font-bold mb-8 text-center text-amber-800 section-title">رشته‌های فعال</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <!-- Web Development Field -->
-            <div class="glass-card p-6 rounded-xl">
-                <div class="flex items-center justify-between mb-4">
-                    <h3 class="text-xl font-bold flex items-center text-amber-700">
-                        <i class="fas fa-code text-amber-600 mr-2"></i>
-                        تولید‌کننده و توسعه‌دهنده پایگاه‌های اینترنتی
-                    </h3>
-                    <span class="active"></span>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="header-main">
+                <div class="logo" role="img" aria-label="لوگوی فن‌آموز زرین برای آموزش فنی و حرفه‌ای">
+                    <i class="fas fa-graduation-cap" aria-hidden="true"></i>
                 </div>
-                
-                <div class="accordion-item">
-                    <div class="accordion-header" onclick="toggleAccordion(this)">
-                        <span>استاندارد رشته</span>
-                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
-                    </div>
-                    <div class="accordion-content">
-                        <a href="https://zncd.ir/?direct_file=eyJpZCI6IjFtRG12RFBnQUlMUS1sUm5ZT09PX1QxOWFrUlVxT1F3SCIsImFjY291bnRJZCI6IjA1MTI3MjA5MDc5MTM1ODgwNDk2IiwidHlwZSI6ImFwcGxpY2F0aW9uL3BkZiIsIm5hbWUiOiJ3ZWJfMTJfUGhwTXlzcWwucGRmIn0="
-                           target="_blank" class="course-link">
-                            استاندارد رشته تولید‌کننده و توسعه‌دهنده پایگاه‌های اینترنتی
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="accordion-item">
-                    <div class="accordion-header" onclick="toggleAccordion(this)">
-                        <span>دروس پایه ۱۲</span>
-                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
-                    </div>
-                    <div class="accordion-content">
-                        <a href="https://zncd.ir/?direct_file=eyJpZCI6IjFtRG12RFBnQUlMUS1sUm5ZT09PX1QxOWFrUlVxT1F3SCIsImFjY291bnRJZCI6IjA5MTI3MjA5MDc5MTM1ODgwNDk2IiwidHlwZSI6ImFwcGxpY2F0aW9uL3BkZiIsIm5hbWUiOiJ3ZWJfMTJfUGhwTXlzcWwucGRmIn0="
-                           target="_blank" class="course-link">
-                            توسعه دهنده صفحات وب با PHP و MySQL
-                        </a>
-                        <a href="https://zncd.ir/?direct_file=eyJpZCI6IjE0cUpjQzRzUDRQWWxSa210VXFHYTJfcHlSaHpMU3hmUSIsImFjY291bnRJZCI6IjA1MTI3MjA5MDc5MTM1ODgwNDk2IiwidHlwZSI6ImFwcGxpY2F0aW9uL3BkZiIsIm5hbWUiOiJ3ZWJfMTJfd29yZHByZXNzLnBkZiJ9"
-                           target="_blank" class="course-link">
-                            توسعه دهنده سیستم های مدیریت محتوا با WordPress
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="accordion-item">
-                    <div class="accordion-header" onclick="toggleAccordion(this)">
-                        <span>دروس پایه ۱۱</span>
-                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
-                    </div>
-                    <div class="accordion-content">
-                        <a href="https://zncd.ir/?direct_file=eyJpZCI6IjFrTGhJWWxsT2t5TFBqeDNCOVFuaU9WSlRLU3lzLU1XQiIsImA6Y291bnRJZCI6IjA1MTI3MjA5MDc5MTM1ODgwNDk2IiwidHlwZSI6ImFwcGxpY2F0aW9uL3BkZiIsIm5hbWUiOiJ3ZWJfMTFfV2ViRGVzaWduLnBkZiJ9"
-                           target="_blank" class="course-link">
-                            تولید کننده و توسعه دهنده پایگاه های اینترنتی
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="accordion-item">
-                    <div class="accordion-header" onclick="toggleAccordion(this)">
-                        <span>دروس پایه ۱۰</span>
-                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
-                    </div>
-                    <div class="accordion-content">
-                        <a href="https://zncd.ir/?direct_file=eyJpZCI6IjFJdThXckNaLTVhRlhzVFJpWTd6dlo0LU1YRl81M2RidCIsImFjY291bnRJZCI6IjA1MTI3MjA5MDc5MTM1ODgwNDk2IiwidHlwZSI6ImFwcGxpY2F0aW9uL3BkZiIsIm5hbWUiOiIxMC1lQ2l0aXplbi5wZGYifQ=="
-                           target="_blank" class="course-link">
-                            استفاده از مهارت شهروند الکترونیک
-                        </a>
-                        <a href="https://zncd.ir/?direct_file=eyJpZCI6IjFQQkdmZXRYc2gzbkZKZ1hldWYybkdBZHNzb054MWhuUSIsImFjY291bnRJZCI6IjA1MTI3MjA5MDc5MTM1ODgwNDk2IiwidHlwZSI6ImFwcGxpY2F0aW9uL3BkZiIsIm5hbWUiOiIxMC1Db21Vc2VyLnBkZiJ9"
-                           target="_blank" class="course-link">
-                            کاربر رایانه
-                        </a>
-                        <a href="https://zncd.ir/?direct_file=eyJpZCI6IjFpaXJrSzM3N1NYT2V5QkEtanhwNGpZV3dsOVk1UHdPVSIsImFjY291bnRJZCI6IjA1MTI3MjA9MDc5MTM1ODgwNDk2IiwidHlwZSI6ImFwcGxpY2F0aW9uL3BkZiIsIm5hbWUiOiIxMC1PZmZpY2VBdXRvVXNlci5wZGYifQ=="
-                           target="_blank" class="course-link">
-                            کاربر اتوماسیون اداری
-                        </a>
-                    </div>
+                <div class="header-text">
+                    <h1>فن‌آموز زرین</h1>
+                    <p>استان فارس - مرکز تعالی آموزشی</p>
                 </div>
             </div>
             
-            <!-- E-Content Development Field -->
-            <div class="glass-card p-6 rounded-xl">
-                <div class="flex items-center justify-between mb-4">
-                    <h3 class="text-xl font-bold flex items-center text-amber-700">
-                        <i class="fas fa-laptop-code text-amber-600 mr-2"></i>
-                        تولید محتوای آموزشی الکترونیکی
-                    </h3>
-                    <span class="active"></span>
+            <nav class="nav-menu">
+                <a href="#team">تیم متخصصان</a>
+                <a href="#fields">رشته‌ها</a>
+                <a href="#schools">هنرستان‌ها</a>
+                <a href="#resources">منابع آموزشی</a>
+                <a href="#support">پشتیبانی</a>
+                <button id="darkModeToggle" style="background: var(--dark-blue); color: white; border: none; padding: 0.5rem 1rem; border-radius: var(--radius-medium); cursor: pointer; transition: var(--transition-fast); margin-right: 1rem;">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </nav>
+            
+            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <nav class="mobile-nav" id="mobileNav">
+        <div class="mobile-nav-header">
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                <div class="logo" style="width: 3rem; height: 3rem; font-size: 1.25rem;">
+                    <i class="fas fa-graduation-cap"></i>
                 </div>
-                
-                <div class="accordion-item">
-                    <div class="accordion-header" onclick="toggleAccordion(this)">
-                        <span>استاندارد رشته</span>
-                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                <div>
+                    <h3 style="color: var(--primary-color); margin: 0; font-size: 1.25rem;">فن‌آموز زرین</h3>
+                    <p style="color: var(--accent-color); margin: 0; font-size: 0.875rem;">منوی اصلی</p>
+                </div>
+            </div>
+            <button class="mobile-nav-close" onclick="toggleMobileMenu()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="mobile-nav-menu">
+            <div class="mobile-nav-item">
+                <a href="#team">
+                    <i class="fas fa-users"></i>
+                    تیم متخصصان
+                </a>
+            </div>
+            <div class="mobile-nav-item">
+                <a href="#fields">
+                    <i class="fas fa-code"></i>
+                    رشته‌های تخصصی
+                </a>
+            </div>
+            <div class="mobile-nav-item">
+                <a href="#schools">
+                    <i class="fas fa-school"></i>
+                    شبکه هنرستان‌ها
+                </a>
+            </div>
+            <div class="mobile-nav-item">
+                <a href="#resources">
+                    <i class="fas fa-book"></i>
+                    منابع آموزشی
+                </a>
+            </div>
+            <div class="mobile-nav-item">
+                <a href="#reports">
+                    <i class="fas fa-chart-bar"></i>
+                    گزارش‌های عملکرد
+                </a>
+            </div>
+            <div class="mobile-nav-item">
+                <a href="#support">
+                    <i class="fas fa-headset"></i>
+                    پشتیبانی
+                </a>
+            </div>
+            <div class="mobile-nav-item">
+                <a href="https://t.me/cszarindasht" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-telegram"></i>
+                    کانال تلگرام
+                </a>
+            </div>
+            <div class="mobile-nav-item">
+                <a href="https://wa.me/989372565994" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-whatsapp"></i>
+                    واتساپ
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-parallax"></div>
+        <div class="hero-content">
+            <div style="display: flex; align-items: center; justify-content: center; gap: 2rem; margin-bottom: 2rem;">
+                <div style="width: 120px; height: 120px; background: var(--pure-white); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 30px rgba(255,255,255,0.3);">
+                    <i class="fas fa-graduation-cap" style="font-size: 4rem; color: var(--dark-blue);"></i>
+                </div>
+            </div>
+            <h1 class="fade-in-up" style="font-size: 2.5rem; color: var(--pure-white); margin-bottom: 1rem; font-weight: 600; line-height: 1.3;">گروه کامپیوتر شهرستان زرین‌دشت</h1>
+            <div style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border-radius: 20px; padding: 2rem; margin: 2rem auto; max-width: 800px; border: 2px solid rgba(255,255,255,0.2);">
+                <p class="fade-in-up" style="font-size: 1.2rem; color: var(--pure-white); margin-bottom: 1rem; font-weight: 500;">✨ این سایت به همت اساتید و اعضای فرهیخته فن‌آموز زرین نوشته شده ✨</p>
+                <p class="fade-in-up" style="font-size: 1rem; color: rgba(255,255,255,0.9); line-height: 1.6;">مخصوص دانش‌آموزان عزیز و گرامی مدارس استان فارس - زرین‌دشت<br>
+                جایی که علم و دانش با عشق و تعهد آمیخته می‌شود 🌟</p>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+    <!-- Special Features Section -->
+    <section class="section" style="background: var(--matte-black); border-bottom: 1px solid var(--glass-border);">
+        <div class="container">
+            <h3 class="section-title" style="color: white;">ویژگی‌های خاص مورد نیاز دانش‌آموزان</h3>
+            <div class="resources-grid">
+                <div class="resource-category fade-in-up" style="background: rgba(0,0,0,0.8); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); color: white;">
+                    <div class="category-header" style="border-bottom: 2px solid rgba(255,255,255,0.2);">
+                        <i class="fas fa-star" style="color: white;"></i>
+                        <h4 style="color: white;">ابزارهای ضروری برنامه‌نویسی</h4>
                     </div>
-                    <div class="accordion-content">
-                        <a href="https://zncd.ir/?direct_file=eyJpZCI6IjFtNTJTbmRjRHF4bE9kTzRFUzlxeGo0dDRMWnZvRjhhVCIsImFjY291bnRJZCI6IjA5MTI3MjA5MDc5MTM1ODgwNDk2IiwidHlwZSI6ImFwcGxpY2F0aW9uL3BkZiIsIm5hbWUiOiJlQ29udGVudEVkdV9TZGFuZGFyZEFtb3plc2hpLnBkZiJ9"
-                           target="_blank" class="course-link">
-                            استاندارد رشته تولید محتوای آموزشی الکترونیکی
-                        </a>
+                    <div class="resource-list">
+                        <div class="resource-item" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);">
+                            <i class="fas fa-code" style="color: #D4AF37;"></i>
+                            <div class="resource-info">
+                                <h5 style="color: white;">Visual Studio Code</h5>
+                                <p style="color: rgba(255,255,255,0.8);">محیط توسعه رایگان مایکروسافت با پشتیبانی کامل</p>
+                                <a href="https://code.visualstudio.com" target="_blank" rel="noopener noreferrer" style="color: white;">دانلود رسمی</a>
+                            </div>
+                        </div>
+                        
+                        <div class="resource-item" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);">
+                            <i class="fas fa-database" style="color: white;"></i>
+                            <div class="resource-info">
+                                <h5 style="color: white;">XAMPP</h5>
+                                <p style="color: rgba(255,255,255,0.8);">سرور محلی Apache, MySQL, PHP برای تست پروژه‌ها</p>
+                                <a href="https://www.apachefriends.org" target="_blank" rel="noopener noreferrer" style="color: white;">دانلود رسمی</a>
+                            </div>
+                        </div>
+                        
+                        <div class="resource-item" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);">
+                            <i class="fab fa-git-alt" style="color: white;"></i>
+                            <div class="resource-info">
+                                <h5 style="color: white;">Git & GitHub Desktop</h5>
+                                <p style="color: rgba(255,255,255,0.8);">کنترل نسخه و مدیریت پروژه‌های گروهی</p>
+                                <a href="https://desktop.github.com" target="_blank" rel="noopener noreferrer" style="color: white;">دانلود GitHub Desktop</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                
-                <div class="accordion-item">
-                    <div class="accordion-header" onclick="toggleAccordion(this)">
-                        <span>دروس پایه ۱۲</span>
-                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+
+                <div class="resource-category fade-in-up" style="background: rgba(0,0,0,0.8); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); color: white;">
+                    <div class="category-header" style="border-bottom: 2px solid rgba(255,255,255,0.2);">
+                        <i class="fas fa-palette" style="color: white;"></i>
+                        <h4 style="color: white;">نرم‌افزارهای طراحی حرفه‌ای</h4>
                     </div>
-                    <div class="accordion-content">
-                        <a href="https://zncd.ir/?direct_file=eyJpZCI6IjFaQ0JxalV4V2lxTnFNd1I3MUtYSl9TZWZwMGloWEtTQyIsImFjY291bnRJZCI6IjA1MTI3MjA5MDc5MTM1ODgwNDk2IiwidHlwZSI6ImFwcGxpY2F0aW9uL3BkZiIsIm5hbWUiOiJlQ29udGVudEVkdV_8xMl9Vc2VyR3JhcGhpY0Vjb250ZW50LnBkZiJ9"
-                           target="_blank" class="course-link">
-                            کاربر گرافیکی محتوای آموزشی
-                        </a>
-                        <a href="https://zncd.ir/?direct_file=eyJpZCI6IjFmUTJJSU90Qm44T281bmpyb3JLMWNzcWowSG5xbV9wTSIsImFjY291bnRJZCI6IjA1MTI3MjA9MDc5MTM1ODgwNDk2IiwidHlwZSI6ImFwcGxpY2F0aW9uL3BkZiIsIm5hbWUiOiJlQ29udGVudEVkdV_8xMl9lQ29udGVudE1ha2VyRm9yZUVkdWNhdGlvbi5wZGYifQ=="
-                           target="_blank" class="course-link">
-                            محتواساز آموزش الکترونیکی
-                        </a>
+                    <div class="resource-list">
+                        <div class="resource-item" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);">
+                            <i class="fab fa-figma" style="color: white;"></i>
+                            <div class="resource-info">
+                                <h5 style="color: white;">Figma</h5>
+                                <p style="color: rgba(255,255,255,0.8);">طراحی UI/UX آنلاین و همکاری تیمی</p>
+                                <a href="https://figma.com" target="_blank" rel="noopener noreferrer" style="color: white;">استفاده آنلاین</a>
+                            </div>
+                        </div>
+                        
+                        <div class="resource-item" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);">
+                            <i class="fas fa-paint-brush" style="color: white;"></i>
+                            <div class="resource-info">
+                                <h5 style="color: white;">Canva Pro</h5>
+                                <p style="color: rgba(255,255,255,0.8);">طراحی گرافیک آسان با قالب‌های آماده</p>
+                                <a href="https://canva.com" target="_blank" rel="noopener noreferrer" style="color: white;">شروع طراحی</a>
+                            </div>
+                        </div>
+                        
+                        <div class="resource-item" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);">
+                            <i class="fas fa-image" style="color: white;"></i>
+                            <div class="resource-info">
+                                <h5 style="color: white;">GIMP</h5>
+                                <p style="color: rgba(255,255,255,0.8);">ویرایش تصاویر رایگان و قدرتمند</p>
+                                <a href="https://gimp.org" target="_blank" rel="noopener noreferrer" style="color: white;">دانلود رایگان</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                
-                <div class="accordion-item">
-                    <div class="accordion-header" onclick="toggleAccordion(this)">
-                        <span>دروس پایه ۱۱</span>
-                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+
+                <div class="resource-category fade-in-up" style="background: rgba(0,0,0,0.8); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); color: white;">
+                    <div class="category-header" style="border-bottom: 2px solid rgba(255,255,255,0.2);">
+                        <i class="fas fa-graduation-cap" style="color: white;"></i>
+                        <h4 style="color: white;">پلتفرم‌های یادگیری آنلاین</h4>
                     </div>
-                    <div class="accordion-content">
-                        <a href="https://zncd.ir/?direct_file=eyJpZCI6IjEzdDRTZ01henktOWlEVFZwWXluREVDWUF6VVE5STBoVyIsImFjY291bnRJZCI6IjA1MTI3MjA9MDc5MTM1ODgwNDk2IiwidHlwZSI6ImFwcGxpY2F0aW9uL3BkZiIsIm5hbWUiOiJlQ29udGVudEVkdV_8xMV9QdWJsaWNFQ29udGVudE1ha2VyLnBkZiJ9"
-                           target="_blank" class="course-link">
-                            تولید کننده محتوای الکترونیکی عمومی
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="accordion-item">
-                    <div class="accordion-header" onclick="toggleAccordion(this)">
-                        <span>دروس پایه ۱۰</span>
-                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
-                    </div>
-                    <div class="accordion-content">
-                        <a href="https://zncd.ir/?direct_file=eyJpZCI6IjFJdThXckNaLTVhRlhzVFJpWTd6dlo0LU1YRl81M2RidCIsImFjY291bnRJZCI6IjA5MTI3MjA9MDc5MTM1ODgwNDk2IiwidHlwZSI6ImFwcGxpY2F0aW9uL3BkZiIsIm5hbWUiOiIxMC1lQ2l0aXplbi5wZGYifQ=="
-                           target="_blank" class="course-link">
-                            استفاده از مهارت شهروند الکترونیکی
-                        </a>
-                        <a href="https://zncd.ir/?direct_file=eyJpZCI6IjFQQkdmZXRYc2gzbkZKZ1hldWYybkdBZHNzb054MWhuUSIsImFjY291bnRJZCI6IjA1MTI3MjA9MDc5MTM1ODgwNDk2IiwidHlwZSI6ImFwcGxpY2F0aW9uL3BkZiIsIm5hbWUiOiIxMC1Db21Vc2VyLnBkZiJ9"
-                           target="_blank" class="course-link">
-                            کاربر رایانه
-                        </a>
-                        <a href="https://zncd.ir/?direct_file=eyJpZCI6IjFpaXJrSzM3N1NYT2V5QkEtanhwNGpZV3dsOVk1UHdPVSIsImFjY291bnRJZCI6IjA5MTI3MjA9MDc5MTM1ODgwNDk2IiwidHlwZSI6ImFwcGxpY2F0aW9uL3BkZiIsIm5hbWUiOiIxMC1PZmZpY2VBdXRvVXNlci5wZGYifQ=="
-                           target="_blank" class="course-link">
-                            کاربر اتوماسیون اداری
-                        </a>
+                    <div class="resource-list">
+                        <div class="resource-item" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);">
+                            <i class="fab fa-youtube" style="color: white;"></i>
+                            <div class="resource-info">
+                                <h5 style="color: white;">فری کد کمپ فارسی</h5>
+                                <p style="color: rgba(255,255,255,0.8);">آموزش‌های رایگان برنامه‌نویسی به زبان فارسی</p>
+                                <a href="https://freecodecamp.org" target="_blank" rel="noopener noreferrer" style="color: white;">شروع یادگیری</a>
+                            </div>
+                        </div>
+                        
+                        <div class="resource-item" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);">
+                            <i class="fas fa-laptop-code" style="color: white;"></i>
+                            <div class="resource-info">
+                                <h5 style="color: white;">کدکدمی</h5>
+                                <p style="color: rgba(255,255,255,0.8);">دوره‌های تعاملی برنامه‌نویسی با تمرین عملی</p>
+                                <a href="https://codecademy.com" target="_blank" rel="noopener noreferrer" style="color: white;">ثبت نام</a>
+                            </div>
+                        </div>
+                        
+                        <div class="resource-item" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);">
+                            <i class="fas fa-certificate" style="color: white;"></i>
+                            <div class="resource-info">
+                                <h5 style="color: white;">کورسرا</h5>
+                                <p style="color: rgba(255,255,255,0.8);">دوره‌های دانشگاهی با گواهینامه معتبر</p>
+                                <a href="https://coursera.org" target="_blank" rel="noopener noreferrer" style="color: white;">مشاهده دوره‌ها</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <script>
-        function toggleAccordion(header) {
-            const content = header.nextElementSibling;
-            const icon = header.querySelector('i');
-            const accordionItems = header.closest('.glass-card').querySelectorAll('.accordion-item');
+    <!-- Team Section - Moved to top -->
+    <section id="team" class="section team-section">
+        <div class="container">
+            <h3 class="section-title">تیم متخصصان فن‌آموز زرین</h3>
+            <div class="team-grid">
+                <div class="team-category slide-in-left">
+                    <h4><i class="fas fa-user-tie"></i> کارشناسان ارشد</h4>
+                    <ul class="team-list">
+                        <li>محمدامین ابراهیمی - کارشناس فنی حرفه‌ای و کاردانش</li>
+                        <li>حمید رضایی - کارشناس آموزش و توسعه</li>
+                    </ul>
+                </div>
 
-            if (content && icon) {
-                accordionItems.forEach(item => {
-                    const itemContent = item.querySelector('.accordion-content');
-                    const itemIcon = item.querySelector('.accordion-header i');
-                    if (itemContent !== content) {
-                        itemContent.classList.remove('show');
-                        itemIcon.style.transform = 'rotate(0deg)';
-                    }
-                });
-                content.classList.toggle('show');
-                icon.style.transform = content.classList.contains('show') ? 'rotate(180deg)' : 'rotate(0deg)';
-            }
-        }
-    </script>
-</body>
-</html>
-                            </a>
+                <div class="team-category slide-in-right">
+                    <h4><i class="fas fa-user-shield"></i> مدیریت اجرایی</h4>
+                    <ul class="team-list">
+                        <li>فاطمه معتمد - سرگروه و مدیر اجرایی فن‌آموز زرین</li>
+                    </ul>
+                </div>
+
+                <div class="team-category slide-in-left">
+                    <h4><i class="fas fa-chalkboard-teacher"></i> هیئت علمی و هنرآموزان</h4>
+                    <ul class="team-list">
+                        <li>شهره پورغلام - استاد برنامه‌نویسی وب</li>
+                        <li>عبدالمحسن راستی - متخصص توسعه نرم‌افزار</li>
+                        <li>فاطمه معتمد - استاد طراحی رابط کاربری</li>
+                        <li>اسما گل نژاد - متخصص محتوای دیجیتال</li>
+                        <li>فاطمه رحمانی - استاد گرافیک و ملتی‌مدیا</li>
+                        <li>زینت راستگو - متخصص سیستم‌های آموزشی</li>
+                        <li>فرج نظری - استاد فناوری‌های نوین</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fields Section -->
+    <section id="fields" class="section fields-section">
+        <div class="container">
+            <h3 class="section-title">رشته‌های تخصصی فعال</h3>
+            
+            <!-- Field 1 -->
+            <div class="field-card fade-in-up">
+                <div class="field-title">
+                    <i class="fas fa-code"></i>
+                    <span>تولید‌کننده و توسعه‌دهنده پایگاه‌های اینترنتی</span>
+                    <span class="status-badge">فعال</span>
+                </div>
+                
+                <div class="course-category">
+                    <h4>استاندارد رشته و چارچوب آموزشی</h4>
+                    <ul class="course-list">
+                        <li><a href="web_12_PhpMysql.pdf" target="_blank">استاندارد رشته تولید‌کننده و توسعه‌دهنده پایگاه‌های اینترنتی</a></li>
+                    </ul>
+                </div>
+
+                <div class="course-category">
+                    <h4>دوره پایه دهم - مبانی فناوری</h4>
+                    <ul class="course-list">
+                        <li><a href="10-eCitizen.pdf" target="_blank">مهارت‌های شهروند الکترونیک</a></li>
+                        <li><a href="10-ComUser.pdf" target="_blank">کاربری پیشرفته رایانه</a></li>
+                        <li><a href="10-OfficeAutoUser.pdf" target="_blank">سیستم‌های اتوماسیون اداری</a></li>
+                    </ul>
+                </div>
+
+                <div class="course-category">
+                    <h4>دوره یازدهم - توسعه وب</h4>
+                    <ul class="course-list">
+                        <li><a href="web_11_WebDesign.pdf" target="_blank">طراحی و توسعه پایگاه‌های اینترنتی</a></li>
+                    </ul>
+                </div>
+
+                <div class="course-category">
+                    <h4>دوره دوازدهم - تخصصی پیشرفته</h4>
+                    <ul class="course-list">
+                        <li><a href="web_12_PhpMysql.pdf" target="_blank">توسعه پویا با PHP و MySQL</a></li>
+                        <li><a href="web_12_wordpress.pdf" target="_blank">سیستم‌های مدیریت محتوا با WordPress</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Field 2 -->
+            <div class="field-card fade-in-up">
+                <div class="field-title">
+                    <i class="fas fa-laptop"></i>
+                    <span>تولید محتوای آموزشی الکترونیکی</span>
+                    <span class="status-badge">فعال</span>
+                </div>
+                
+                <div class="course-category">
+                    <h4>استاندارد رشته و چارچوب آموزشی</h4>
+                    <ul class="course-list">
+                        <li><a href="eContentEdu_SdandardAmozesh.pdf" target="_blank">استاندارد رشته تولید محتوای آموزشی الکترونیکی</a></li>
+                    </ul>
+                </div>
+
+                <div class="course-category">
+                    <h4>دوره پایه دهم - مبانی دیجیتال</h4>
+                    <ul class="course-list">
+                        <li><a href="10-eCitizen.pdf" target="_blank">مهارت‌های شهروند الکترونیک</a></li>
+                        <li><a href="10-ComUser.pdf" target="_blank">کاربری پیشرفته رایانه</a></li>
+                        <li><a href="10-OfficeAutoUser.pdf" target="_blank">سیستم‌های اتوماسیون اداری</a></li>
+                    </ul>
+                </div>
+
+                <div class="course-category">
+                    <h4>دوره یازدهم - تولید محتوا</h4>
+                    <ul class="course-list">
+                        <li><a href="eContentEdu_11_PublicEContentMaker.pdf" target="_blank">تولید محتوای الکترونیکی عمومی</a></li>
+                    </ul>
+                </div>
+
+                <div class="course-category">
+                    <h4>دوره دوازدهم - تخصصی پیشرفته</h4>
+                    <ul class="course-list">
+                        <li><a href="eContentEdu_12_UserGraphicEcontent.pdf" target="_blank">طراحی گرافیکی محتوای آموزشی</a></li>
+                        <li><a href="eContentEdu_12_eContentMakerForEducation.pdf" target="_blank">سیستم‌های آموزش الکترونیکی</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schools Section -->
+    <section id="schools" class="section schools-section">
+        <div class="container">
+            <h3 class="section-title">شبکه هنرستان‌های شهرستان</h3>
+            <div class="schools-grid">
+                <div class="school-card slide-in-left">
+                    <h4 class="school-name">هنرستان زینب کبری</h4>
+                    <div class="school-info">
+                        <strong>رشته‌های تخصصی:</strong>
+                        <ul class="majors-list">
+                            <li>تولید کننده و توسعه دهنده پایگاه‌های اینترنتی (کاردانش)</li>
+                            <li>تولید کننده محتوای آموزشی الکترونیکی (کاردانش)</li>
+                            <li>طراحی و خیاطی لباس شب و عروس (کاردانش)</li>
+                        </ul>
+                    </div>
+                    <div class="school-info">
+                        <strong>مدیر اجرایی:</strong> فاطمه بروانیا
+                    </div>
+                    <div class="school-info">
+                        <strong>تماس مستقیم:</strong> ۰۷۱۵۳۷۲۴۸۹۵
+                    </div>
+                </div>
+
+                <div class="school-card slide-in-right">
+                    <h4 class="school-name">هنرستان والفجر</h4>
+                    <div class="school-info">
+                        <strong>رشته‌های تخصصی:</strong>
+                        <ul class="majors-list">
+                            <li>تولید کننده محتوای آموزشی الکترونیکی (کاردانش)</li>
+                            <li>حسابداری و مالی (فنی و حرفه‌ای)</li>
+                        </ul>
+                    </div>
+                    <div class="school-info">
+                        <strong>مدیر اجرایی:</strong> زهرا پوررستمی
+                    </div>
+                    <div class="school-info">
+                        <strong>تماس مستقیم:</strong> ۰۷۱۵۳۷۴۳۵۷۸
+                    </div>
+                </div>
+
+                <div class="school-card slide-in-left">
+                    <h4 class="school-name">هنرستان شهید پاکیزه خو</h4>
+                    <div class="school-info">
+                        <strong>رشته‌های تخصصی:</strong>
+                        <ul class="majors-list">
+                            <li>تولید کننده محتوای آموزشی الکترونیکی (کاردانش)</li>
+                        </ul>
+                    </div>
+                    <div class="school-info">
+                        <strong>مدیر اجرایی:</strong> فاطمه تروال
+                    </div>
+                    <div class="school-info">
+                        <strong>تماس مستقیم:</strong> ۰۹۱۷۹۳۳۴۹۴۳
+                    </div>
+                </div>
+
+                <div class="school-card slide-in-right">
+                    <h4 class="school-name">هنرستان شهید باهنر</h4>
+                    <div class="school-info">
+                        <strong>رشته‌های تخصصی:</strong>
+                        <ul class="majors-list">
+                            <li>تولید کننده و توسعه دهنده پایگاه‌های اینترنتی (کاردانش)</li>
+                        </ul>
+                    </div>
+                    <div class="school-info">
+                        <strong>مدیر اجرایی:</strong> عباس امیری
+                    </div>
+                    <div class="school-info">
+                        <strong>تماس مستقیم:</strong> ۰۷۱۵۳۷۲۳۰۰۷
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section id="resources" class="section resources-section">
+        <div class="container">
+            <h3 class="section-title">مرکز منابع آموزشی پیشرفته</h3>
+            
+            <div class="resources-grid">
+                <!-- Kardanesh Books -->
+                <div class="resource-category fade-in-up">
+                    <div class="category-header">
+                        <i class="fas fa-book"></i>
+                        <h4>کتابخانه کاردانش</h4>
+                    </div>
+                    <div class="resource-list">
+                        <div class="resource-item">
+                            <i class="fas fa-file-pdf"></i>
+                            <div class="resource-info">
+                                <h5>نرم افزار اداری پیشرفته</h5>
+                                <p>Microsoft Access - OneNote - ابزارهای بهره‌وری</p>
+                                <a href="https://www.chap.sch.ir/books/1401-1402/693/C311253_0.pdf" target="_blank" rel="noopener noreferrer">دانلود منبع</a>
+                            </div>
+                        </div>
+                        
+                        <div class="resource-item">
+                            <i class="fas fa-download"></i>
+                            <div class="resource-info">
+                                <h5>Microsoft OneNote</h5>
+                                <p>نسخه رسمی و اصلی از مایکروسافت</p>
+                                <a href="https://www.microsoft.com/en-us/microsoft-365/onenote/download-windows" target="_blank" rel="noopener noreferrer">دانلود رسمی</a>
+                            </div>
+                        </div>
+                        
+                        <div class="resource-item">
+                            <i class="fas fa-file-pdf"></i>
+                            <div class="resource-info">
+                                <h5>بسته‌های نرم‌افزاری تخصصی</h5>
+                                <p>Excel پیشرفته - PowerPoint حرفه‌ای</p>
+                                <a href="https://www.chap.sch.ir/books/1401-1402/693/C311254.pdf" target="_blank" rel="noopener noreferrer">دانلود منبع</a>
+                            </div>
+                        </div>
+                        
+                        <div class="resource-item">
+                            <i class="fas fa-file-pdf"></i>
+                            <div class="resource-info">
+                                <h5>فناوری اطلاعات و ارتباطات</h5>
+                                <p>مبانی ICT و کاربردهای نوین</p>
+                                <a href="https://www.chap.sch.ir/books/1401-1402/693/C311255.pdf" target="_blank" rel="noopener noreferrer">دانلود منبع</a>
+                            </div>
+                        </div>
+                        
+                        <div class="resource-item">
+                            <i class="fas fa-file-pdf"></i>
+                            <div class="resource-info">
+                                <h5>تولید محتوای الکترونیکی - جلد اول</h5>
+                                <p>مبانی و اصول تولید محتوای دیجیتال</p>
+                                <a href="https://www.chap.sch.ir/books/1401-1402/693/C311253_0.pdf" target="_blank" rel="noopener noreferrer">دانلود منبع</a>
+                            </div>
+                        </div>
+                        
+                        <div class="resource-item">
+                            <i class="fas fa-file-pdf"></i>
+                            <div class="resource-info">
+                                <h5>تولید محتوای الکترونیکی - جلد دوم</h5>
+                                <p>تکنیک‌های پیشرفته و ابزارهای حرفه‌ای</p>
+                                <a href="https://www.chap.sch.ir/books/1401-1402/693/C311254.pdf" target="_blank" rel="noopener noreferrer">دانلود منبع</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Technical Materials -->
+                <div class="resource-category fade-in-up">
+                    <div class="category-header">
+                        <i class="fas fa-file-alt"></i>
+                        <h4>مجموعه جزوات تخصصی</h4>
+                    </div>
+                    <div class="resource-list">
+                        <div class="resource-item">
+                            <i class="fas fa-file-pdf"></i>
+                            <div class="resource-info">
+                                <h5>Adobe Animate پیشرفته</h5>
+                                <p>انیمیشن و تعامل در محیط وب</p>
+                                <a href="https://www.chap.sch.ir/sites/default/files/lbooks/1402-1403/598/C210290.pdf" target="_blank" rel="noopener noreferrer">دانلود جزوه</a>
+                            </div>
+                        </div>
+                        
+                        <div class="resource-item">
+                            <i class="fas fa-file-pdf"></i>
+                            <div class="resource-info">
+                                <h5>Adobe Premiere Pro</h5>
+                                <p>ویرایش ویدیو و پست‌پروداکشن</p>
+                                <a href="https://www.chap.sch.ir/sites/default/files/lbooks/1402-1403/598/C210291.pdf" target="_blank" rel="noopener noreferrer">دانلود جزوه</a>
+                            </div>
+                        </div>
+                        
+                        <div class="resource-item">
+                            <i class="fas fa-globe"></i>
+                            <div class="resource-info">
+                                <h5>WordPress Development</h5>
+                                <p>مستندات رسمی توسعه قالب و افزونه</p>
+                                <a href="https://wordpress.org/support/article/creating-a-wordpress-theme/" target="_blank" rel="noopener noreferrer">مراجعه به مستندات</a>
+                            </div>
+                        </div>
+                        
+                        <div class="resource-item">
+                            <i class="fas fa-globe"></i>
+                            <div class="resource-info">
+                                <h5>Microsoft Excel 2019</h5>
+                                <p>راهنمای کامل و مستندات رسمی</p>
+                                <a href="https://support.microsoft.com/en-us/office/excel-help-and-learning-9bc05390-5e5a-4a5a-8e7a-5e3f5b5b5b5b" target="_blank" rel="noopener noreferrer">مراجعه به مایکروسافت</a>
+                            </div>
+                        </div>
+                        
+                        <div class="resource-item">
+                            <i class="fas fa-file-pdf"></i>
+                            <div class="resource-info">
+                                <h5>بسته جامع تولید محتوا</h5>
+                                <p>ابزارها و تکنیک‌های مدرن</p>
+                                <a href="https://www.chap.sch.ir/sites/default/files/lbooks/1402-1403/598/C210290.pdf" target="_blank" rel="noopener noreferrer">دانلود بسته</a>
+                            </div>
+                        </div>
+                        
+                        <div class="resource-item">
+                            <i class="fas fa-globe"></i>
+                            <div class="resource-info">
+                                <h5>Adobe Captivate 2019</h5>
+                                <p>مستندات رسمی آموزش تعاملی</p>
+                                <a href="https://www.adobe.com/products/captivate.html" target="_blank" rel="noopener noreferrer">مراجعه به ادوبی</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Official Sites -->
+                <div class="resource-category fade-in-up">
+                    <div class="category-header">
+                        <i class="fas fa-university"></i>
+                        <h4>مراجع رسمی آموزشی</h4>
+                    </div>
+                    <div class="resource-list">
+                        <div class="resource-item">
+                            <i class="fas fa-globe"></i>
+                            <div class="resource-info">
+                                <h5>دفتر تالیف و چاپ کتب درسی</h5>
+                                <p>مرجع رسمی منابع آموزشی کشور</p>
+                                <a href="https://chap.sch.ir" target="_blank" rel="noopener noreferrer">ورود به سایت</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Useful Sites -->
+                <div class="resource-category fade-in-up">
+                    <div class="category-header">
+                        <i class="fas fa-link"></i>
+                        <h4>پلتفرم‌های آموزشی</h4>
+                    </div>
+                    <div class="resource-list">
+                        <div class="resource-item">
+                            <i class="fas fa-desktop"></i>
+                            <div class="resource-info">
+                                <h5>دبیرخانه راهبری کامپیوتر زنجان</h5>
+                                <p>منابع تخصصی و تجربیات عملی</p>
+                                <a href="https://zncd.ir" target="_blank" rel="noopener noreferrer">مراجعه به سایت</a>
+                            </div>
+                        </div>
+                        
+                        <div class="resource-item">
+                            <i class="fas fa-download"></i>
+                            <div class="resource-info">
+                                <h5>سافت گذر</h5>
+                                <p>مرکز دانلود نرم‌افزارهای تخصصی</p>
+                                <a href="https://www.softgozar.com" target="_blank" rel="noopener noreferrer">مراجعه به سایت</a>
+                            </div>
+                        </div>
+                        
+                        <div class="resource-item">
+                            <i class="fas fa-play-circle"></i>
+                            <div class="resource-info">
+                                <h5>آپارات</h5>
+                                <p>ویدیوهای آموزشی فارسی</p>
+                                <a href="https://www.aparat.com" target="_blank" rel="noopener noreferrer">مراجعه به سایت</a>
+                            </div>
+                        </div>
+                        
+                        <div class="resource-item">
+                            <i class="fab fa-youtube"></i>
+                            <div class="resource-info">
+                                <h5>YouTube Education</h5>
+                                <p>آموزش‌های بین‌المللی و تخصصی</p>
+                                <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">مراجعه به سایت</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MyMedu -->
+                <div class="resource-category fade-in-up">
+                    <div class="category-header">
+                        <i class="fas fa-graduation-cap"></i>
+                        <h4>پلتفرم مای مدیو</h4>
+                    </div>
+                    <div class="resource-list">
+                        <div class="resource-item">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                            <div class="resource-info">
+                                <h5>مای مدیو</h5>
+                                <p>سیستم یادگیری هوشمند و تعاملی</p>
+                                <a href="https://mymedu.ir" target="_blank" rel="noopener noreferrer">ورود به پلتفرم</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AI Tools -->
+                <div class="resource-category fade-in-up">
+                    <div class="category-header">
+                        <i class="fas fa-robot"></i>
+                        <h4>ابزارهای هوش مصنوعی</h4>
+                    </div>
+                    <div class="resource-list">
+                        <!-- General AI -->
+                        <div class="resource-item">
+                            <i class="fas fa-mobile-alt"></i>
+                            <div class="resource-info">
+                                <h5>Gemini Nano</h5>
+                                <p>مدل سبک گوگل برای متن، تصویر و خلاصه آفلاین</p>
+                                <a href="https://gemini.google.com" target="_blank" rel="noopener noreferrer">دسترسی</a>
+                            </div>
+                        </div>
+
+                        <!-- Image Generation -->
+                        <div class="resource-item">
+                            <i class="fas fa-image"></i>
+                            <div class="resource-info">
+                                <h5>Nano Banana (Krea.ai)</h5>
+                                <p>ویرایش تصویر با Gemini 2.5 Flash</p>
+                                <a href="https://krea.ai/apps/edit/nano-banana-edit" target="_blank" rel="noopener noreferrer">دسترسی</a>
+                            </div>
+                        </div>
+
+                        <!-- Coding AI -->
+                        <div class="resource-item">
+                            <i class="fas fa-code"></i>
+                            <div class="resource-info">
+                                <h5>GitHub Copilot</h5>
+                                <p>پیشنهاد کد واقعی‌زمان در VS Code</p>
+                                <a href="https://github.com/features/copilot" target="_blank" rel="noopener noreferrer">دسترسی</a>
+                            </div>
+                        </div>
+
+                        <div class="resource-item">
+                            <i class="fas fa-code"></i>
+                            <div class="resource-info">
+                                <h5>Cursor IDE</h5>
+                                <p>محیط توسعه با AI برای کدنویسی سریع</p>
+                                <a href="https://cursor.sh" target="_blank" rel="noopener noreferrer">دسترسی</a>
+                            </div>
+                        </div>
+
+                        <div class="resource-item">
+                            <i class="fas fa-code"></i>
+                            <div class="resource-info">
+                                <h5>Windsurf</h5>
+                                <p>IDE بومی AI برای توسعه سریع</p>
+                                <a href="https://windsurf.com" target="_blank" rel="noopener noreferrer">دسترسی</a>
+                            </div>
+                        </div>
+
+                        <div class="resource-item">
+                            <i class="fas fa-code"></i>
+                            <div class="resource-info">
+                                <h5>Claude Code</h5>
+                                <p>استدلال پیچیده برای پروژه‌های بزرگ</p>
+                                <a href="https://claude.ai" target="_blank" rel="noopener noreferrer">دسترسی</a>
+                            </div>
+                        </div>
+
+                        <div class="resource-item">
+                            <i class="fas fa-code"></i>
+                            <div class="resource-info">
+                                <h5>Tabnine</h5>
+                                <p>تکمیل کد امن با پشتیبانی ۳۰+ زبان</p>
+                                <a href="https://tabnine.com" target="_blank" rel="noopener noreferrer">دسترسی</a>
+                            </div>
+                        </div>
+
+                        <div class="resource-item">
+                            <i class="fas fa-cloud"></i>
+                            <div class="resource-info">
+                                <h5>Amazon Q Developer</h5>
+                                <p>ابزار AWS برای دیباگ و کد ابری</p>
+                                <a href="https://aws.amazon.com/q/developer" target="_blank" rel="noopener noreferrer">دسترسی</a>
+                            </div>
+                        </div>
+
+                        <div class="resource-item">
+                            <i class="fas fa-terminal"></i>
+                            <div class="resource-info">
+                                <h5>Aider</h5>
+                                <p>ابزار خط‌فرمانی برای ویرایش کد با AI</p>
+                                <a href="https://aider.chat" target="_blank" rel="noopener noreferrer">دسترسی</a>
+                            </div>
+                        </div>
+
+                        <div class="resource-item">
+                            <i class="fas fa-edit"></i>
+                            <div class="resource-info">
+                                <h5>Zed Editor</h5>
+                                <p>ویرایشگر سریع با ادغام AI</p>
+                                <a href="https://zed.dev" target="_blank" rel="noopener noreferrer">دسترسی</a>
+                            </div>
+                        </div>
+
+                        <div class="resource-item">
+                            <i class="fas fa-bolt"></i>
+                            <div class="resource-info">
+                                <h5>Bolt</h5>
+                                <p>تولید اپ کامل از پرامپت‌های ساده</p>
+                                <a href="https://bolt.new" target="_blank" rel="noopener noreferrer">دسترسی</a>
+                            </div>
+                        </div>
+
+                        <div class="resource-item">
+                            <i class="fas fa-laptop-code"></i>
+                            <div class="resource-info">
+                                <h5>Replit</h5>
+                                <p>محیط آنلاین کدنویسی با AI</p>
+                                <a href="https://replit.com" target="_blank" rel="noopener noreferrer">دسترسی</a>
+                            </div>
+                        </div>
+
+                        <!-- Image Generation AI -->
+                        <div class="resource-item">
+                            <i class="fas fa-palette"></i>
+                            <div class="resource-info">
+                                <h5>Midjourney</h5>
+                                <p>تولید تصاویر هنری با کیفیت بالا</p>
+                                <a href="https://midjourney.com" target="_blank" rel="noopener noreferrer">دسترسی</a>
+                            </div>
+                        </div>
+
+                        <div class="resource-item">
+                            <i class="fas fa-image"></i>
+                            <div class="resource-info">
+                                <h5>DALL-E 3</h5>
+                                <p>ژنراتور OpenAI برای تصاویر واقع‌گرایانه</p>
+                                <a href="https://openai.com/dall-e" target="_blank" rel="noopener noreferrer">دسترسی</a>
+                            </div>
+                        </div>
+
+                        <div class="resource-item">
+                            <i class="fas fa-image"></i>
+                            <div class="resource-info">
+                                <h5>Stable Diffusion</h5>
+                                <p>مدل متن‌باز برای تولید و ویرایش تصاویر</p>
+                                <a href="https://stability.ai" target="_blank" rel="noopener noreferrer">دسترسی</a>
+                            </div>
+                        </div>
+
+                        <div class="resource-item">
+                            <i class="fab fa-google"></i>
+                            <div class="resource-info">
+                                <h5>ImageFX (Google)</h5>
+                                <p>ابزار گوگل برای تصاویر واقعی و سریع</p>
+                                <a href="https://aitestkitchen.withgoogle.com" target="_blank" rel="noopener noreferrer">دسترسی</a>
+                            </div>
+                        </div>
+
+                        <div class="resource-item">
+                            <i class="fas fa-font"></i>
+                            <div class="resource-info">
+                                <h5>Ideogram</h5>
+                                <p>تولید لوگو و پوستر با تمرکز روی متن</p>
+                                <a href="https://ideogram.ai" target="_blank" rel="noopener noreferrer">دسترسی</a>
+                            </div>
+                        </div>
+
+                        <div class="resource-item">
+                            <i class="fas fa-paint-brush"></i>
+                            <div class="resource-info">
+                                <h5>LeonardoAI</h5>
+                                <p>تولید هنر سفارشی با مدل‌های متنوع</p>
+                                <a href="https://leonardo.ai" target="_blank" rel="noopener noreferrer">دسترسی</a>
+                            </div>
+                        </div>
+
+                        <div class="resource-item">
+                            <i class="fas fa-magic"></i>
+                            <div class="resource-info">
+                                <h5>Reve</h5>
+                                <p>ژنراتور سریع با ویرایش پیشرفته</p>
+                                <a href="https://reve.art" target="_blank" rel="noopener noreferrer">دسترسی</a>
+                            </div>
+                        </div>
+
+                        <div class="resource-item">
+                            <i class="fas fa-camera"></i>
+                            <div class="resource-info">
+                                <h5>Shutterstock AI</h5>
+                                <p>تصاویر استوک با AI، ادغام حرفه‌ای</p>
+                                <a href="https://shutterstock.com/ai-image-generator" target="_blank" rel="noopener noreferrer">دسترسی</a>
+                            </div>
+                        </div>
+
+                        <div class="resource-item">
+                            <i class="fab fa-adobe"></i>
+                            <div class="resource-info">
+                                <h5>Adobe Firefly</h5>
+                                <p>ادغام با فتوشاپ برای ویرایش حرفه‌ای</p>
+                                <a href="https://firefly.adobe.com" target="_blank" rel="noopener noreferrer">دسترسی</a>
+                            </div>
+                        </div>
+
+                        <div class="resource-item">
+                            <i class="fas fa-search"></i>
+                            <div class="resource-info">
+                                <h5>Grok Image Gen</h5>
+                                <p>تولید تصاویر با جستجوی واقعی‌زمان (xAI)</p>
+                                <a href="https://grok.com" target="_blank" rel="noopener noreferrer">دسترسی</a>
+                            </div>
+                        </div>
+
+                        <!-- Content Generation -->
+                        <div class="resource-item">
+                            <i class="fas fa-pen-fancy"></i>
+                            <div class="resource-info">
+                                <h5>Jasper</h5>
+                                <p>محتوای بازاریابی و بلاگ با SEO</p>
+                                <a href="https://jasper.ai" target="_blank" rel="noopener noreferrer">دسترسی</a>
+                            </div>
+                        </div>
+
+                        <div class="resource-item">
+                            <i class="fas fa-copy"></i>
+                            <div class="resource-info">
+                                <h5>Copy.ai</h5>
+                                <p>کپی، ایمیل و پست‌های اجتماعی سریع</p>
+                                <a href="https://copy.ai" target="_blank" rel="noopener noreferrer">دسترسی</a>
+                            </div>
+                        </div>
+
+                        <div class="resource-item">
+                            <i class="fas fa-edit"></i>
+                            <div class="resource-info">
+                                <h5>Rytr</h5>
+                                <p>محتوای ساختاریافته با هدایت AI</p>
+                                <a href="https://rytr.me" target="_blank" rel="noopener noreferrer">دسترسی</a>
+                            </div>
+                        </div>
+
+                        <div class="resource-item">
+                            <i class="fas fa-palette"></i>
+                            <div class="resource-info">
+                                <h5>Canva Magic Studio</h5>
+                                <p>طراحی گرافیکی، ویدیو و متن با AI</p>
+                                <a href="https://canva.com/magic-studio" target="_blank" rel="noopener noreferrer">دسترسی</a>
+                            </div>
+                        </div>
+
+                        <div class="resource-item">
+                            <i class="fas fa-video"></i>
+                            <div class="resource-info">
+                                <h5>Descript</h5>
+                                <p>ویرایش ویدیو/پادکست با متن و تولید صدا</p>
+                                <a href="https://descript.com" target="_blank" rel="noopener noreferrer">دسترسی</a>
+                            </div>
+                        </div>
+
+                        <div class="resource-item">
+                            <i class="fas fa-user-circle"></i>
+                            <div class="resource-info">
+                                <h5>Synthesia</h5>
+                                <p>ویدیوهای آموزشی با آواتارهای AI</p>
+                                <a href="https://synthesia.io" target="_blank" rel="noopener noreferrer">دسترسی</a>
+                            </div>
+                        </div>
+
+                        <div class="resource-item">
+                            <i class="fas fa-mouse-pointer"></i>
+                            <div class="resource-info">
+                                <h5>GravityWrite</h5>
+                                <p>بلاگ و لندینگ پیج با یک‌کلیک</p>
+                                <a href="https://gravitywrite.com" target="_blank" rel="noopener noreferrer">دسترسی</a>
+                            </div>
+                        </div>
+
+                        <div class="resource-item">
+                            <i class="fas fa-search"></i>
+                            <div class="resource-info">
+                                <h5>Writesonic</h5>
+                                <p>ابزار SEO برای محتوای بلند</p>
+                                <a href="https://writesonic.com" target="_blank" rel="noopener noreferrer">دسترسی</a>
+                            </div>
+                        </div>
+
+                        <div class="resource-item">
+                            <i class="fas fa-play-circle"></i>
+                            <div class="resource-info">
+                                <h5>Lumen5</h5>
+                                <p>تبدیل متن به ویدیوهای اجتماعی</p>
+                                <a href="https://lumen5.com" target="_blank" rel="noopener noreferrer">دسترسی</a>
+                            </div>
+                        </div>
+
+                        <div class="resource-item">
+                            <i class="fas fa-chart-line"></i>
+                            <div class="resource-info">
+                                <h5>Surfer SEO</h5>
+                                <p>بهینه‌سازی محتوا برای گوگل</p>
+                                <a href="https://surferseo.com" target="_blank" rel="noopener noreferrer">دسترسی</a>
+                            </div>
+                        </div>
+
+                        <!-- Language Learning AI -->
+                        <div class="resource-item">
+                            <i class="fas fa-comments"></i>
+                            <div class="resource-info">
+                                <h5>Langua</h5>
+                                <p>معلم AI برای مکالمه و فیدبک واقعی‌زمان</p>
+                                <a href="https://languatalk.com" target="_blank" rel="noopener noreferrer">دسترسی</a>
+                            </div>
+                        </div>
+
+                        <div class="resource-item">
+                            <i class="fas fa-globe"></i>
+                            <div class="resource-info">
+                                <h5>Univerbal</h5>
+                                <p>اپ مکالمه با AI برای انگلیسی</p>
+                                <a href="https://univerbal.app" target="_blank" rel="noopener noreferrer">دسترسی</a>
+                            </div>
+                        </div>
+
+                        <div class="resource-item">
+                            <i class="fas fa-gamepad"></i>
+                            <div class="resource-info">
+                                <h5>Duolingo</h5>
+                                <p>درس‌های بازی‌وار با AI (۱۴۸ دوره)</p>
+                                <a href="https://duolingo.com" target="_blank" rel="noopener noreferrer">دسترسی</a>
+                            </div>
+                        </div>
+
+                        <div class="resource-item">
+                            <i class="fas fa-microphone"></i>
+                            <div class="resource-info">
+                                <h5>Gliglish</h5>
+                                <p>تمرین speaking در سناریوهای واقعی</p>
+                                <a href="https://gliglish.com" target="_blank" rel="noopener noreferrer">دسترسی</a>
+                            </div>
+                        </div>
+
+                        <div class="resource-item">
+                            <i class="fas fa-volume-up"></i>
+                            <div class="resource-info">
+                                <h5>TalkTutor AI</h5>
+                                <p>فیدبک صوتی برای تلفظ و گرامر</p>
+                                <a href="https://talktutor.ai" target="_blank" rel="noopener noreferrer">دسترسی</a>
+                            </div>
+                        </div>
+
+                        <div class="resource-item">
+                            <i class="fas fa-clock"></i>
+                            <div class="resource-info">
+                                <h5>Just Learn</h5>
+                                <p>پلتفرم ۲۴/۷ برای ۱۵+ زبان</p>
+                                <a href="https://justlearn.com" target="_blank" rel="noopener noreferrer">دسترسی</a>
+                            </div>
+                        </div>
+
+                        <div class="resource-item">
+                            <i class="fas fa-comment-dots"></i>
+                            <div class="resource-info">
+                                <h5>ChatGPT Voice</h5>
+                                <p>تمرین مکالمه با GPT-4o، رایگان</p>
+                                <a href="https://chat.openai.com" target="_blank" rel="noopener noreferrer">دسترسی</a>
+                            </div>
+                        </div>
+
+                        <div class="resource-item">
+                            <i class="fas fa-bullhorn"></i>
+                            <div class="resource-info">
+                                <h5>Elsa Speak</h5>
+                                <p>تمرکز روی تلفظ با AI</p>
+                                <a href="https://elsaspeak.com" target="_blank" rel="noopener noreferrer">دسترسی</a>
+                            </div>
+                        </div>
+
+                        <div class="resource-item">
+                            <i class="fas fa-book-open"></i>
+                            <div class="resource-info">
+                                <h5>Babbel</h5>
+                                <p>درس‌های تعاملی برای مبتدیان</p>
+                                <a href="https://babbel.com" target="_blank" rel="noopener noreferrer">دسترسی</a>
+                            </div>
+                        </div>
+
+                        <div class="resource-item">
+                            <i class="fas fa-brain"></i>
+                            <div class="resource-info">
+                                <h5>Memrise</h5>
+                                <p>فلش‌کارت‌های AI برای واژگان</p>
+                                <a href="https://memrise.com" target="_blank" rel="noopener noreferrer">دسترسی</a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-        
-        <!-- Schools Section -->
-        <section id="schools" class="glass-card p-8 mx-4 my-8">
-            <h2 class="text-2xl font-bold mb-8 text-center text-white section-title">هنرستان‌های شهرستان</h2> <!-- تغییر از amber-800 به سفید -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="glass-card p-6 rounded-xl hover:shadow-lg transition duration-300">
-                    <div class="flex items-center mb-4">
-                        <i class="fas fa-school text-2.5rem text-white mr-3"></i> <!-- تغییر از amber-600 به سفید -->
-                        <h3 class="text-xl font-bold text-white">هنرستان زینب کبری حاجی آباد</h3> <!-- تغییر از amber-700 به سفید -->
+        </div>
+    </section>
+
+    <!-- Professional Blog Section -->
+    <section class="section" style="background: var(--pure-white); padding: 4rem 0;">
+        <div class="container">
+            <h3 class="section-title">بلاگ حرفه‌ای فن‌آموز زرین</h3>
+            <div class="blog-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; margin-bottom: 4rem;">
+                <article class="blog-card" style="background: var(--beige-bg); border-radius: var(--radius-large); overflow: hidden; box-shadow: var(--shadow-light); border: 2px solid var(--pure-white); transition: var(--transition-normal);">
+                    <div style="background: var(--dark-blue); padding: 2rem; text-align: center;">
+                        <i class="fas fa-code" style="font-size: 3rem; color: white; margin-bottom: 1rem;"></i>
+                        <h4 style="color: white; font-size: 1.3rem; font-weight: 600; margin: 0;">چگونه برنامه‌نویس حرفه‌ای شویم</h4>
                     </div>
-                    <ul class="space-y-2 mb-4">
-                        <li class="flex items-center">
-                            <i class="fas fa-circle text-xs text-white ml-2"></i> <!-- تغییر از amber-600 به سفید -->
-                            <span>رشته تولید کننده و توسعه دهنده پایگاه‌های اینترنتی (کاردانش)</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-circle text-xs text-white ml-2"></i> <!-- تغییر از amber-600 به سفید -->
-                            <span>رشته تولید کننده محتوای آموزشی الکترونیکی (کاردانش)</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-circle text-xs text-white ml-2"></i> <!-- تغییر از amber-600 به سفید -->
-                            <span>رشته خیاطی لباس شب و عروس (کاردانش)</span>
-                        </li>
-                    </ul>
-                    <div class="space-y-2 mt-4">
-                        <p class="font-medium text-white">مدیر:</p> <!-- تغییر از amber-700 به سفید -->
-                        <p class="text-gray-400">فاطمه بروانیا</p>
-                        <p class="font-medium text-white">تلفن مدرسه:</p> <!-- تغییر از amber-700 به سفید -->
-                        <p class="text-gray-400">۰۷۱۵۳۷۲۴۸۹۵</p>
+                    <div style="padding: 2rem;">
+                        <div id="article1-preview">
+                            <p style="color: var(--text-secondary); margin-bottom: 1.5rem; line-height: 1.6;">راهنمای کامل برای ورود به دنیای برنامه‌نویسی، انتخاب زبان مناسب، یادگیری مفاهیم پایه و کسب مهارت‌های مورد نیاز بازار کار. از صفر تا استخدام!</p>
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; font-size: 0.9rem; color: var(--text-muted);">
+                                <span><i class="fas fa-user" style="margin-left: 0.5rem;"></i>رعنا پرموزه</span>
+                                <span><i class="fas fa-eye" style="margin-left: 0.5rem;"></i>۱,۲۴۵ بازدید</span>
+                            </div>
+                            <button onclick="showFullArticle('article1')" style="width: 100%; background: var(--dark-blue); color: white; border: none; padding: 0.75rem; border-radius: var(--radius-medium); font-weight: 600; cursor: pointer; transition: var(--transition-fast);">ادامه مطلب</button>
+                        </div>
+                        <div id="article1-full" style="display: none;">
+                            <div style="text-align: right; line-height: 1.8; color: var(--text-primary);">
+                                <h5 style="color: var(--dark-blue); margin-bottom: 1rem;">🎯 مسیر کامل برنامه‌نویسی حرفه‌ای</h5>
+                                <p style="margin-bottom: 1rem;"><strong>گام اول: انتخاب زبان برنامه‌نویسی</strong><br>
+                                برای شروع، Python یا JavaScript را انتخاب کنید. Python برای مبتدیان آسان‌تر است و JavaScript برای توسعه وب ضروری.</p>
+                                
+                                <p style="margin-bottom: 1rem;"><strong>گام دوم: یادگیری مفاهیم پایه</strong><br>
+                                متغیرها، حلقه‌ها، شرط‌ها، توابع و ساختار داده‌ها را به خوبی یاد بگیرید. این‌ها پایه همه چیز هستند.</p>
+                                
+                                <p style="margin-bottom: 1rem;"><strong>گام سوم: پروژه‌های عملی</strong><br>
+                                حداقل ۱۰ پروژه کوچک بسازید. از ماشین حساب ساده تا وبسایت کامل.</p>
+                                
+                                <p style="margin-bottom: 1rem;"><strong>گام چهارم: یادگیری فریمورک‌ها</strong><br>
+                                برای وب: React یا Vue.js<br>
+                                برای موبایل: React Native یا Flutter<br>
+                                برای بک‌اند: Node.js یا Django</p>
+                                
+                                <p style="margin-bottom: 1rem;"><strong>نکات مهم برای موفقیت:</strong><br>
+                                ✅ روزانه حداقل ۲ ساعت تمرین کنید<br>
+                                ✅ در گیت‌هاب پروژه‌هایتان را آپلود کنید<br>
+                                ✅ در انجمن‌های برنامه‌نویسی فعال باشید<br>
+                                ✅ از منابع معتبر مثل freeCodeCamp استفاده کنید</p>
+                                
+                                <div style="background: var(--light-gray); padding: 1rem; border-radius: 10px; margin: 1rem 0;">
+                                    <strong>💡 توصیه ویژه:</strong> در فن‌آموز زرین ما دوره‌های عملی PHP و MySQL داریم که مستقیماً به بازار کار متصل می‌شوند!
+                                </div>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin: 1.5rem 0; font-size: 0.9rem; color: var(--text-muted);">
+                                <span><i class="fas fa-user" style="margin-left: 0.5rem;"></i>رعنا پرموزه</span>
+                                <span><i class="fas fa-eye" style="margin-left: 0.5rem;"></i>۱,۲۴۵ بازدید</span>
+                            </div>
+                            <button onclick="hideFullArticle('article1')" style="width: 100%; background: var(--text-muted); color: white; border: none; padding: 0.75rem; border-radius: var(--radius-medium); font-weight: 600; cursor: pointer; transition: var(--transition-fast);">بستن مطلب</button>
+                        </div>
                     </div>
-                </div>
-                <div class="glass-card p-6 rounded-xl hover:shadow-lg transition duration-300">
-                    <div class="flex items-center mb-4">
-                        <i class="fas fa-school text-2.5rem text-white mr-3"></i> <!-- تغییر از amber-600 به سفید -->
-                        <h3 class="text-xl font-bold text-white">هنرستان والفجر شهرپیر</h3> <!-- تغییر از amber-700 به سفید -->
+                </article>
+                
+                <article class="blog-card" style="background: var(--beige-bg); border-radius: var(--radius-large); overflow: hidden; box-shadow: var(--shadow-light); border: 2px solid var(--pure-white); transition: var(--transition-normal);">
+                    <div style="background: var(--dark-blue); padding: 2rem; text-align: center;">
+                        <i class="fas fa-tools" style="font-size: 3rem; color: white; margin-bottom: 1rem;"></i>
+                        <h4 style="color: white; font-size: 1.3rem; font-weight: 600; margin: 0;">ابزارهای ضروری تولید محتوا ۲۰۲۵</h4>
                     </div>
-                    <ul class="space-y-2 mb-4">
-                        <li class="flex items-center">
-                            <i class="fas fa-circle text-xs text-white ml-2"></i> <!-- تغییر از amber-600 به سفید -->
-                            <span>رشته تولید کننده محتوای آموزشی الکترونیکی (کاردانش)</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-circle text-xs text-white ml-2"></i> <!-- تغییر از amber-600 به سفید -->
-                            <span>رشته حسابداری (فنی و حرفه‌ای)</span>
-                        </li>
-                    </ul>
-                    <div class="space-y-2 mt-4">
-                        <p class="font-medium text-white">مدیر:</p> <!-- تغییر از amber-700 به سفید -->
-                        <p class="text-gray-400">زهرا پوررستمی</p>
-                        <p class="font-medium text-white">تلفن مدرسه:</p> <!-- تغییر از amber-700 به سفید -->
-                        <p class="text-gray-400">۰۷۱۵۳۷۴۳۵۷۸</p>
+                    <div style="padding: 2rem;">
+                        <div id="article2-preview">
+                            <p style="color: var(--text-secondary); margin-bottom: 1.5rem; line-height: 1.6;">معرفی جدیدترین ابزارهای هوش مصنوعی، نرم‌افزارهای طراحی، پلتفرم‌های ویرایش ویدیو و تکنیک‌های مدرن تولید محتوای دیجیتال</p>
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; font-size: 0.9rem; color: var(--text-muted);">
+                                <span><i class="fas fa-user" style="margin-left: 0.5rem;"></i>رعنا پرموزه</span>
+                                <span><i class="fas fa-eye" style="margin-left: 0.5rem;"></i>۹۸۹ بازدید</span>
+                            </div>
+                            <button onclick="showFullArticle('article2')" style="width: 100%; background: var(--dark-blue); color: white; border: none; padding: 0.75rem; border-radius: var(--radius-medium); font-weight: 600; cursor: pointer; transition: var(--transition-fast);">ادامه مطلب</button>
+                        </div>
+                        <div id="article2-full" style="display: none;">
+                            <div style="text-align: right; line-height: 1.8; color: var(--text-primary);">
+                                <h5 style="color: var(--dark-blue); margin-bottom: 1rem;">🛠️ ابزارهای قدرتمند ۲۰۲۵</h5>
+                                
+                                <p style="margin-bottom: 1rem;"><strong>🤖 ابزارهای هوش مصنوعی:</strong><br>
+                                • ChatGPT-4: برای نوشتن متن و کد<br>
+                                • Midjourney: تولید تصاویر حرفه‌ای<br>
+                                • Claude: تحلیل و خلاصه‌سازی<br>
+                                • Gemini: جستجو و تحقیق پیشرفته</p>
+                                
+                                <p style="margin-bottom: 1rem;"><strong>🎨 نرم‌افزارهای طراحی:</strong><br>
+                                • Adobe Creative Suite (Photoshop, Illustrator, Premiere)<br>
+                                • Figma: طراحی UI/UX<br>
+                                • Canva Pro: طراحی سریع<br>
+                                • DaVinci Resolve: ویرایش ویدیو رایگان</p>
+                                
+                                <p style="margin-bottom: 1rem;"><strong>📱 پلتفرم‌های آنلاین:</strong><br>
+                                • Notion: مدیریت پروژه<br>
+                                • Trello: سازماندهی کارها<br>
+                                • GitHub: نگهداری کدها<br>
+                                • Behance: نمایش پورتفولیو</p>
+                                
+                                <p style="margin-bottom: 1rem;"><strong>🎬 ابزارهای ویدیو:</strong><br>
+                                • OBS Studio: ضبط صفحه<br>
+                                • Loom: ویدیوهای آموزشی سریع<br>
+                                • Synthesia: ویدیو با آواتار AI<br>
+                                • Descript: ویرایش ویدیو با متن</p>
+                                
+                                <div style="background: var(--light-gray); padding: 1rem; border-radius: 10px; margin: 1rem 0;">
+                                    <strong>💡 نکته مهم:</strong> در رشته تولید محتوای آموزشی الکترونیکی ما، همه این ابزارها به صورت عملی آموزش داده می‌شوند!
+                                </div>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin: 1.5rem 0; font-size: 0.9rem; color: var(--text-muted);">
+                                <span><i class="fas fa-user" style="margin-left: 0.5rem;"></i>رعنا پرموزه</span>
+                                <span><i class="fas fa-eye" style="margin-left: 0.5rem;"></i>۹۸۹ بازدید</span>
+                            </div>
+                            <button onclick="hideFullArticle('article2')" style="width: 100%; background: var(--text-muted); color: white; border: none; padding: 0.75rem; border-radius: var(--radius-medium); font-weight: 600; cursor: pointer; transition: var(--transition-fast);">بستن مطلب</button>
+                        </div>
                     </div>
-                </div>
-                <div class="glass-card p-6 rounded-xl hover:shadow-lg transition duration-300">
-                    <div class="flex items-center mb-4">
-                        <i class="fas fa-school text-2.5rem text-white mr-3"></i> <!-- تغییر از amber-600 به سفید -->
-                        <h3 class="text-xl font-bold text-white">هنرستان شهید پاکیزه خو</h3> <!-- تغییر از amber-700 به سفید -->
+                </article>
+                
+                <article class="blog-card" style="background: var(--beige-bg); border-radius: var(--radius-large); overflow: hidden; box-shadow: var(--shadow-light); border: 2px solid var(--pure-white); transition: var(--transition-normal);">
+                    <div style="background: var(--dark-blue); padding: 2rem; text-align: center;">
+                        <i class="fas fa-graduation-cap" style="font-size: 3rem; color: white; margin-bottom: 1rem;"></i>
+                        <h4 style="color: white; font-size: 1.3rem; font-weight: 600; margin: 0;">آینده‌های شغلی فن‌آموزان</h4>
                     </div>
-                    <ul class="space-y-2 mb-4">
-                        <li class="flex items-center">
-                            <i class="fas fa-circle text-xs text-white ml-2"></i> <!-- تغییر از amber-600 به سفید -->
-                            <span>رشته تولید کننده محتوای آموزشی الکترونیکی (کاردانش)</span>
-                        </li>
-                    </ul>
-                    <div class="space-y-2 mt-4">
-                        <p class="font-medium text-white">مدیر:</p> <!-- تغییر از amber-700 به سفید -->
-                        <p class="text-gray-400">فاطمه تروال</p>
-                        <p class="font-medium text-white">تلفن مدرسه:</p> <!-- تغییر از amber-700 به سفید -->
-                        <p class="text-gray-400">۰۹۱۷۹۳۳۴۹۴۳</p>
+                    <div style="padding: 2rem;">
+                        <div id="article3-preview">
+                            <p style="color: var(--text-secondary); margin-bottom: 1.5rem; line-height: 1.6;">بررسی کامل فرصت‌های شغلی، حقوق و دستمزد، مسیرهای پیشرفت و نکات مهم برای ورود موفق به بازار کار فناوری</p>
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; font-size: 0.9rem; color: var(--text-muted);">
+                                <span><i class="fas fa-user" style="margin-left: 0.5rem;"></i>رعنا پرموزه</span>
+                                <span><i class="fas fa-eye" style="margin-left: 0.5rem;"></i>۱,۵۶۷ بازدید</span>
+                            </div>
+                            <button onclick="showFullArticle('article3')" style="width: 100%; background: var(--dark-blue); color: white; border: none; padding: 0.75rem; border-radius: var(--radius-medium); font-weight: 600; cursor: pointer; transition: var(--transition-fast);">ادامه مطلب</button>
+                        </div>
+                        <div id="article3-full" style="display: none;">
+                            <div style="text-align: right; line-height: 1.8; color: var(--text-primary);">
+                                <h5 style="color: var(--dark-blue); margin-bottom: 1rem;">🚀 آینده‌های شغلی پرطرفدار</h5>
+                                
+                                <p style="margin-bottom: 1rem;"><strong>💻 توسعه‌دهنده وب:</strong><br>
+                                حقوق: ۱۵-۵۰ میلیون تومان<br>
+                                مهارت‌ها: HTML, CSS, JavaScript, PHP, MySQL<br>
+                                محل کار: شرکت‌های فناوری، فریلنسری، استارتاپ‌ها</p>
+                                
+                                <p style="margin-bottom: 1rem;"><strong>🎨 طراح UI/UX:</strong><br>
+                                حقوق: ۱۲-۴۰ میلیون تومان<br>
+                                مهارت‌ها: Figma, Adobe XD, تحقیق کاربر<br>
+                                محل کار: آژانس‌های دیجیتال، شرکت‌های بزرگ</p>
+                                
+                                <p style="margin-bottom: 1rem;"><strong>📱 توسعه‌دهنده موبایل:</strong><br>
+                                حقوق: ۲۰-۶۰ میلیون تومان<br>
+                                مهارت‌ها: React Native, Flutter, Swift<br>
+                                محل کار: شرکت‌های اپلیکیشن، بانک‌ها</p>
+                                
+                                <p style="margin-bottom: 1rem;"><strong>🎬 تولیدکننده محتوا:</strong><br>
+                                حقوق: ۱۰-۳۵ میلیون تومان<br>
+                                مهارت‌ها: Adobe Premiere, After Effects, استراتژی محتوا<br>
+                                محل کار: شبکه‌های اجتماعی، آژانس‌های تبلیغاتی</p>
+                                
+                                <p style="margin-bottom: 1rem;"><strong>🤖 متخصص هوش مصنوعی:</strong><br>
+                                حقوق: ۳۰-۱۰۰ میلیون تومان<br>
+                                مهارت‌ها: Python, Machine Learning, Deep Learning<br>
+                                محل کار: شرکت‌های فناوری پیشرفته</p>
+                                
+                                <div style="background: var(--light-gray); padding: 1rem; border-radius: 10px; margin: 1rem 0;">
+                                    <strong>🎯 راز موفقیت:</strong> ترکیب مهارت‌های فنی با مهارت‌های نرم مثل کار تیمی، ارتباط مؤثر و حل مسئله!
+                                </div>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin: 1.5rem 0; font-size: 0.9rem; color: var(--text-muted);">
+                                <span><i class="fas fa-user" style="margin-left: 0.5rem;"></i>رعنا پرموزه</span>
+                                <span><i class="fas fa-eye" style="margin-left: 0.5rem;"></i>۱,۵۶۷ بازدید</span>
+                            </div>
+                            <button onclick="hideFullArticle('article3')" style="width: 100%; background: var(--text-muted); color: white; border: none; padding: 0.75rem; border-radius: var(--radius-medium); font-weight: 600; cursor: pointer; transition: var(--transition-fast);">بستن مطلب</button>
+                        </div>
                     </div>
-                </div>
-                <div class="glass-card p-6 rounded-xl hover:shadow-lg transition duration-300">
-                    <div class="flex items-center mb-4">
-                        <i class="fas fa-school text-2.5rem text-white mr-3"></i> <!-- تغییر از amber-600 به سفید -->
-                        <h3 class="text-xl font-bold text-white">هنرستان پسرانه شهید باهنر</h3> <!-- تغییر از amber-700 به سفید -->
+                </article>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <!-- Reports Section -->
+    <section class="section resources-section">
+        <div class="container">
+            <h3 class="section-title">گزارش‌های عملکرد سالانه</h3>
+            
+            <div class="resources-grid">
+                <div class="resource-category fade-in-up">
+                    <div class="category-header">
+                        <i class="fas fa-chart-bar"></i>
+                        <h4>آرشیو گزارش‌های رسمی</h4>
                     </div>
-                    <ul class="space-y-2 mb-4">
-                        <li class="flex items-center">
-                            <i class="fas fa-circle text-xs text-white ml-2"></i> <!-- تغییر از amber-600 به سفید -->
-                            <span>رشته تولید کننده و توسعه دهنده پایگاه‌های اینترنتی (کاردانش)</span>
-                        </li>
-                    </ul>
-                    <div class="space-y-2 mt-4">
-                        <p class="font-medium text-white">مدیر:</p> <!-- تغییر از amber-700 به سفید -->
-                        <p class="text-gray-400">عباس امیری</p>
-                        <p class="font-medium text-white">تلفن مدرسه:</p> <!-- تغییر از amber-700 به سفید -->
-                        <p class="text-gray-400">۰۷۱۵۳۷۲۳۰۰۷</p>
+                    <div class="resource-list">
+                        <div class="resource-item">
+                            <i class="fas fa-file-pdf"></i>
+                            <div class="resource-info">
+                                <h5>گزارش عملکرد سال تحصیلی 1402-1403</h5>
+                                <p>گزارش جامع فعالیت‌های آموزشی و پرورشی هنرستان‌های کامپیوتر شهرستان زرین‌دشت</p>
+                                <a href="https://drive.google.com/file/d/1kgTuGpCg3mjpKZlVtE-HqPl0UCj3q0CH/view?usp=drive_link" target="_blank" rel="noopener noreferrer">دانلود گزارش</a>
+                            </div>
+                        </div>
+                        
+                        <div class="resource-item">
+                            <i class="fas fa-file-pdf"></i>
+                            <div class="resource-info">
+                                <h5>گزارش عملکرد سال تحصیلی 1403-1404</h5>
+                                <p>گزارش جامع فعالیت‌های آموزشی و پرورشی هنرستان‌های کامپیوتر شهرستان زرین‌دشت</p>
+                                <a href="https://drive.google.com/file/d/18rcNuo-kM4wrmtljy-uDN-DMWzr28U-C/view?usp=drive_link" target="_blank" rel="noopener noreferrer">دانلود گزارش</a>
+                            </div>
+                        </div>
+                        
+                        <div class="resource-item">
+                            <i class="fas fa-info-circle"></i>
+                            <div class="resource-info">
+                                <h5>راهنمای بارگذاری</h5>
+                                <p>شما می‌توانید فایل‌های PDF گزارش‌های عملکرد جدید را در این بخش بارگذاری کنید.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </section>
-        
-        <!-- Team Section -->
-        <section id="team" class="glass-card p-8 mx-4 my-8">
-            <h2 class="text-2xl font-bold mb-8 text-center text-white section-title">اعضای گروه کامپیوتر زرین‌دشت</h2> <!-- تغییر از amber-800 به سفید -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="glass-card p-6 rounded-xl">
-                    <h3 class="text-xl font-bold mb-4 flex items-center text-white"> <!-- تغییر از amber-700 به سفید -->
-                        <i class="fas fa-user-tie text-white mr-2"></i> <!-- تغییر از amber-600 به سفید -->
-                        کارشناسان
-                    </h3>
-                    <ul class="space-y-3">
-                        <li class="flex items-center">
-                            <div class="w-8 h-8 rounded-full bg-00cccc flex items-center justify-center mr-2 text-white">
-                                <i class="fas fa-user"></i>
-                            </div>
-                            <div>
-                                <p class="font-medium text-gray-400">محمدامین ابراهیمی</p>
-                                <p class="text-sm text-gray-500">کارشناس فنی حرفه‌ای و کاردانش</p>
-                            </div>
-                        </li>
-                        <li class="flex items-center">
-                            <div class="w-8 h-8 rounded-full bg-00cccc flex items-center justify-center mr-2 text-white">
-                                <i class="fas fa-user"></i>
-                            </div>
-                            <div>
-                                <p class="font-medium text-gray-400">حمید رضایی</p>
-                                <p class="text-sm text-gray-500">کارشناس آموزش</p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="glass-card p-6 rounded-xl">
-                    <h3 class="text-xl font-bold mb-4 flex items-center text-white"> <!-- تغییر از amber-700 به سفید -->
-                        <i class="fas fa-user-shield text-white mr-2"></i> <!-- تغییر از amber-600 به سفید -->
-                        سرگروه
-                    </h3>
-                    <ul class="space-y-3">
-                        <li class="flex items-center">
-                            <div class="w-8 h-8 rounded-full bg-00cccc flex items-center justify-center mr-2 text-white">
-                                <i class="fas fa-user"></i>
-                            </div>
-                            <div>
-                                <p class="font-medium text-gray-400">فاطمه معتمد</p>
-                                <p class="text-sm text-gray-500">سرگروه کامپیوتر زرین‌دشت</p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="glass-card p-6 rounded-xl">
-                    <h3 class="text-xl font-bold mb-4 flex items-center text-white"> <!-- تغییر از amber-700 به سفید -->
-                        <i class="fas fa-chalkboard-teacher text-white mr-2"></i> <!-- تغییر از amber-600 به سفید -->
-                        هنرآموزان
-                    </h3>
-                    <ul class="space-y-2">
-                        <li class="flex items-center">
-                            <div class="w-8 h-8 rounded-full bg-00cccc flex items-center justify-center mr-2 text-white">
-                                <i class="fas fa-user"></i>
-                            </div>
-                            <p class="font-medium text-gray-400">شهره پورغلام</p>
-                        </li>
-                        <li class="flex items-center">
-                            <div class="w-8 h-8 rounded-full bg-00cccc flex items-center justify-center mr-2 text-white">
-                                <i class="fas fa-user"></i>
-                            </div>
-                            <p class="font-medium text-gray-400">عبدالمحسن راستی</p>
-                        </li>
-                        <li class="flex items-center">
-                            <div class="w-8 h-8 rounded-full bg-00cccc flex items-center justify-center mr-2 text-white">
-                                <i class="fas fa-user"></i>
-                            </div>
-                            <p class="font-medium text-gray-400">فاطمه معتمد</p>
-                        </li>
-                        <li class="flex items-center">
-                            <div class="w-8 h-8 rounded-full bg-00cccc flex items-center justify-center mr-2 text-white">
-                                <i class="fas fa-user"></i>
-                            </div>
-                            <p class="font-medium text-gray-400">اسما گل نژاد</p>
-                        </li>
-                        <li class="flex items-center">
-                            <div class="w-8 h-8 rounded-full bg-00cccc flex items-center justify-center mr-2 text-white">
-                                <i class="fas fa-user"></i>
-                            </div>
-                            <p class="font-medium text-gray-400">فاطمه رحمانی</p>
-                        </li>
-                        <li class="flex items-center">
-                            <div class="w-8 h-8 rounded-full bg-00cccc flex items-center justify-center mr-2 text-white">
-                                <i class="fas fa-user"></i>
-                            </div>
-                            <p class="font-medium text-gray-400">زینت راستگو</p>
-                        </li>
-                        <li class="flex items-center">
-                            <div class="w-8 h-8 rounded-full bg-00cccc flex items-center justify-center mr-2 text-white">
-                                <i class="fas fa-user"></i>
-                            </div>
-                            <p class="font-medium text-gray-400">فرج نظری</p>
-                        </li>
-                    </ul>
+        </div>
+    </section>
+
+    <!-- Registration Form Section -->
+    <section class="section" style="background: var(--light-gray); padding: 4rem 0;">
+        <div class="container">
+            <h3 class="section-title">فرم ثبت نام</h3>
+            <div style="max-width: 600px; margin: 0 auto;">
+                <form id="registrationForm" style="background: var(--pure-white); padding: 3rem; border-radius: 20px; box-shadow: var(--shadow-medium); border: 2px solid var(--dark-blue);">
+                    <div style="margin-bottom: 2rem;">
+                        <label style="display: block; margin-bottom: 0.5rem; color: var(--text-primary); font-weight: 600;">نام:</label>
+                        <input type="text" id="firstName" required style="width: 100%; padding: 1rem; border: 2px solid var(--light-gray); border-radius: 12px; font-size: 1rem; background: var(--beige-bg); color: var(--text-primary);">
+                    </div>
+                    
+                    <div style="margin-bottom: 2rem;">
+                        <label style="display: block; margin-bottom: 0.5rem; color: var(--text-primary); font-weight: 600;">نام خانوادگی:</label>
+                        <input type="text" id="lastName" required style="width: 100%; padding: 1rem; border: 2px solid var(--light-gray); border-radius: 12px; font-size: 1rem; background: var(--beige-bg); color: var(--text-primary);">
+                    </div>
+                    
+                    <div style="margin-bottom: 2rem;">
+                        <label style="display: block; margin-bottom: 0.5rem; color: var(--text-primary); font-weight: 600;">شماره تماس:</label>
+                        <input type="tel" id="phone" required style="width: 100%; padding: 1rem; border: 2px solid var(--light-gray); border-radius: 12px; font-size: 1rem; background: var(--beige-bg); color: var(--text-primary);">
+                    </div>
+                    
+                    <div style="margin-bottom: 2rem;">
+                        <label style="display: block; margin-bottom: 0.5rem; color: var(--text-primary); font-weight: 600;">ایمیل:</label>
+                        <input type="email" id="email" required style="width: 100%; padding: 1rem; border: 2px solid var(--light-gray); border-radius: 12px; font-size: 1rem; background: var(--beige-bg); color: var(--text-primary);">
+                    </div>
+                    
+                    <div style="margin-bottom: 2rem;">
+                        <label style="display: block; margin-bottom: 0.5rem; color: var(--text-primary); font-weight: 600;">پیام:</label>
+                        <textarea id="message" rows="4" style="width: 100%; padding: 1rem; border: 2px solid var(--light-gray); border-radius: 12px; font-size: 1rem; background: var(--beige-bg); color: var(--text-primary); resize: vertical;"></textarea>
+                    </div>
+                    
+                    <button type="submit" style="width: 100%; padding: 1.25rem; background: var(--dark-blue); color: white; border: none; border-radius: 12px; font-size: 1.1rem; font-weight: 600; cursor: pointer; transition: var(--transition-fast); box-shadow: var(--shadow-medium);">
+                        <i class="fas fa-paper-plane" style="margin-left: 0.5rem;"></i>
+                        ثبت نام
+                    </button>
+                </form>
+                
+                <div id="formMessage" style="margin-top: 1rem; padding: 1rem; border-radius: 12px; display: none;"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Assistant Section -->
+    <section class="section" style="background: rgba(0,0,0,0.9); backdrop-filter: blur(10px); padding: 4rem 0;">
+        <div class="container">
+            <h3 class="section-title" style="color: white;">دستیار هوش مصنوعی زرین</h3>
+            <div style="max-width: 800px; margin: 0 auto;">
+                <div id="chatContainer" style="background: rgba(255,255,255,0.1); border-radius: 20px; padding: 2rem; border: 2px solid rgba(255,255,255,0.2); backdrop-filter: blur(10px);">
+                    <div id="chatMessages" style="height: 400px; overflow-y: auto; margin-bottom: 1rem; padding: 1rem; background: rgba(0,0,0,0.3); border-radius: 15px; border: 1px solid rgba(255,255,255,0.2);">
+                        <div class="ai-message" style="background: rgba(255,255,255,0.9); color: black; padding: 1rem; border-radius: 15px; margin-bottom: 1rem; max-width: 80%; border: 2px solid rgba(255,255,255,0.3);">
+                            <strong>دستیار زرین:</strong> سلام! من دستیار هوش مصنوعی فن‌آموز زرین هستم. می‌تونم در مورد رشته‌های تخصصی، منابع آموزشی، هنرستان‌ها و هر سوال دیگه‌ای راهنماییتون کنم. چطور می‌تونم کمکتون کنم؟
+                        </div>
+                    </div>
+                    
+                    <div style="display: flex; gap: 1rem;">
+                        <input type="text" id="userInput" placeholder="سوال خود را بپرسید..." style="flex: 1; padding: 1rem; border: 2px solid rgba(255,255,255,0.3); border-radius: 12px; font-size: 1rem; background: rgba(255,255,255,0.9); color: black;">
+                        <button id="sendButton" style="padding: 1rem 2rem; background: rgba(255,255,255,0.9); color: black; border: none; border-radius: 12px; font-weight: 600; cursor: pointer; transition: var(--transition-fast); border: 2px solid rgba(255,255,255,0.3);">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
                 </div>
             </div>
-        </section>
-        
-        <!-- Resources Section -->
-        <section id="resources" class="glass-card p-8 mx-4 my-8">
-            <h2 class="text-2xl font-bold mb-8 text-center text-white section-title">منابع آموزشی</h2> <!-- تغییر از amber-800 به سفید -->
-            <div class="mb-8">
-                <h3 class="text-xl font-bold mb-4 flex items-center text-white"> <!-- تغییر از amber-700 به سفید -->
-                    <i class="fas fa-book text-white mr-2"></i> <!-- تغییر از amber-600 به سفید -->
-                    کتاب‌های کاردانش
-                </h3>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                    <a href="https://www.softgozar.com" target="_blank" class="glass-card p-4 hover:bg-gray-800 transition rounded-lg border border-00cccc">
-                        <p class="font-medium text-gray-400">کتاب نرم افزار اداری</p>
-                        <p class="text-sm text-gray-500">Microsoft Access - OneNote</p>
+        </div>
+    </section>
+
+    <!-- Support Section -->
+    <section class="section" style="background: var(--light-gray); padding: 4rem 0;">
+        <div class="container">
+            <h3 class="section-title">مرکز پشتیبانی و ارتباطات</h3>
+            <div class="support-grid">
+                <div class="support-card slide-in-left" style="background: var(--pure-white); color: var(--text-primary); border: 2px solid var(--dark-blue);">
+                    <h4><i class="fab fa-whatsapp" style="color: #25D366;"></i> پشتیبانی واتساپ</h4>
+                    <p>ارتباط مستقیم و سریع با تیم پشتیبانی فنی از طریق واتساپ</p>
+                    <a href="https://wa.me/989372565994?text=سلام%20وقت%20بخیر" target="_blank" rel="noopener noreferrer" style="background: var(--dark-blue); color: white;">
+                        شروع گفتگو
                     </a>
-                    <a href="http://dl.learninweb.com/learning/onenote2016.exe" target="_blank" class="glass-card p-4 hover:bg-gray-800 transition rounded-lg border border-00cccc">
-                        <p class="font-medium text-gray-400">دانلود OneNote</p>
+                </div>
+
+                <div class="support-card slide-in-right" style="background: var(--dark-blue); color: white; border: 2px solid var(--pure-white);">
+                    <h4><i class="fab fa-telegram" style="color: #0088cc;"></i> کانال تلگرام</h4>
+                    <p>عضویت در کانال رسمی فن آموز زرین برای دریافت آخرین اخبار و منابع</p>
+                    <a href="https://t.me/cszarindasht" target="_blank" rel="noopener noreferrer" style="background: var(--pure-white); color: var(--dark-blue);">
+                        عضویت در کانال
                     </a>
-                    <a href="https://dl.yasdl.com/Arash/2018/eBook/PowerPoint.2019.For.Dummies_YasDL.com.rar?" target="_blank" class="glass-card p-4 hover:bg-gray-800 transition rounded-lg border border-00cccc">
-                        <p class="font-medium text-gray-400">کتاب بسته‌های نرم‌افزاری</p>
-                        <p class="text-sm text-gray-500">Excel-PowerPoint</p>
-                    </a>
-                    <a href="https://pdn.sharezilla.ir/d/ebook/Information.And.Communication_p30download.com.zip" target="_blank" class="glass-card p-4 hover:bg-gray-800 transition rounded-lg border border-00cccc">
-                        <p class="font-medium text-gray-400">کتاب اطلاعات و ارتباطات</p>
-                    </a>
-                    <a href="http://www.chap.sch.ir/sites/default/files/lbooks/1401-1402/693/C311253_0.pdf" target="_blank" class="glass-card p-4 hover:bg-gray-800 transition rounded-lg border border-00cccc">
-                        <p class="font-medium text-gray-400">کتاب تولیدکننده محتوای الکترونیکی عمومی (جلد اول)</p>
-                    </a>
-                    <a href="http://chap.sch.ir/sites/default/files/lbooks/1401-1402/693/C311254.pdf" target="_blank" class="glass-card p-4 hover:bg-gray-800 transition rounded-lg border border-00cccc">
-                        <p class="font-medium text-gray-400">کتاب تولیدکننده محتوای الکترونیکی عمومی (جلد دوم)</p>
+                </div>
+
+                <div class="support-card slide-in-left" style="background: var(--beige-bg); color: var(--text-primary); border: 2px solid var(--dark-blue);">
+                    <h4><i class="fas fa-sms" style="color: var(--dark-blue);"></i> پیامک مستقیم</h4>
+                    <p>ارسال پیامک برای دریافت اطلاعات سریع و پشتیبانی فوری</p>
+                    <a href="sms:09372565994" style="background: var(--dark-blue); color: white;">
+                        ارسال پیامک
                     </a>
                 </div>
             </div>
-            <div class="mb-8">
-                <h3 class="text-xl font-bold mb-4 flex items-center text-white"> <!-- تغییر از amber-700 به سفید -->
-                    <i class="fas fa-file-alt text-white mr-2"></i> <!-- تغییر از amber-600 به سفید -->
-                    جزوات دروس فنی و حرفه‌ای
-                </h3>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                    <a href="https://s18.picofile.com/d/8440744118/ffe47ae1-185b-420f-afb2-60c797708ba6/%D8%AC%D8%B2%D9%88%D9%87_%D8%A7%D9%86%DB%8C%D9%85%DB%8C%D8%AA.pdf" target="_blank" class="glass-card p-4 hover:bg-gray-800 transition rounded-lg border border-00cccc">
-                        <p class="font-medium text-gray-400">جزوه Adobe Animate</p>
-                    </a>
-                    <a href="https://s31.picofile.com/d/8470329800/8a841a08-4eef-44de-b168-0e80ecc342a5/%D8%AC%D8%B2%D9%88%D9%87_%D8%A7%D9%93%D9%85%D9%88%D8%B2%D8%B4%DB%8C_%D9%BE%D8%B1%DB%8C%D9%85%DB%8C%D8%B1.pdf" target="_blank" class="glass-card p-4 hover:bg-gray-800 transition rounded-lg border border-00cccc">
-                        <p class="font-medium text-gray-400">جزوه Premiere</p>
-                    </a>
-                    <a href="https://wphelper.ir/wp-content/uploads/2021/11/WordPress-Support-Site-Design-Tutorial.pdf" target="_blank" class="glass-card p-4 hover:bg-gray-800 transition rounded-lg border border-00cccc">
-                        <p class="font-medium text-gray-400">جزوه WordPress</p>
-                    </a>
-                    <a href="https://sariasan.com/wp-content/uploads/2017/12/excel-1.pdf" target="_blank" class="glass-card p-4 hover:bg-gray-800 transition rounded-lg border border-00cccc">
-                        <p class="font-medium text-gray-400">جزوه Excel 2019</p>
-                    </a>
-                    <a href="http://www.chap.sch.ir/sites/default/files/lbooks/1402-1403/598/C210290.pdf" target="_blank" class="glass-card p-4 hover:bg-gray-800 transition rounded-lg border border-00cccc">
-                        <p class="font-medium text-gray-400">بسته آموزشی تولید محتوای الکترونیکی</p>
-                    </a>
-                    <a href="https://gama.ir/test/download/101858/pdf?csrf_token=MTc1MDE1NDkzNzAwNjk4MmJiZjQ5MjYxNjNlY2E2M2IxYzI5NzkxY2JiMDc5ZWI5OWQ4MDRmYzc5YmQxNDY5ZjRjM2U4ZTg4OGQ2NjY0MWZjMTNlMTMxMjlh" target="_blank" class="glass-card p-4 hover:bg-gray-800 transition rounded-lg border border-00cccc">
-                        <p class="font-medium text-gray-400">جزوه Captivate 2019 (چهار فصل اول)</p>
-                    </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                        <div class="logo" style="width: 60px; height: 60px; font-size: 1.5rem;" role="img" aria-label="لوگوی فن‌آموز زرین">
+                            <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+                        </div>
+                        <div>
+                            <h4>فن‌آموز زرین - استان فارس</h4>
+                        </div>
+                    </div>
+                    <p>مرکز تخصصی آموزش فنی و حرفه‌ای</p>
+                    <p>پیشرو در آموزش فناوری‌های نوین و تولید محتوای دیجیتال</p>
+                    <p style="margin-top: 1rem; font-size: 0.9rem; color: rgba(255,255,255,0.7);">
+                        <i class="fas fa-map-marker-alt" style="margin-left: 0.5rem;"></i>
+                        زرین‌دشت، استان فارس، ایران
+                    </p>
                 </div>
-            </div>
-            <div>
-                <h3 class="text-xl font-bold mb-4 flex items-center text-white"> <!-- تغییر از amber-700 به سفید -->
-                    <i class="fas fa-link text-white mr-2"></i> <!-- تغییر از amber-600 به سفید -->
-                    لینک‌های مفید
-                </h3>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <a href="https://zncd.ir" target="_blank" class="glass-card p-4 hover:bg-gray-800 transition rounded-lg border border-00cccc">
-                        <p class="font-medium text-gray-400">وب‌سایت دبیرخانه راهبری کامپیوتر</p>
-                        <p class="text-sm text-gray-500">مستقر در زنجان</p>
-                    </a>
-                    <a href="chap.sch.ir" target="_blank" class="glass-card p-4 hover:bg-gray-800 transition rounded-lg border border-00cccc">
-                        <p class="font-medium text-gray-400">سایت دفتر تالیف و چاپ</p>
-                    </a>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Annual Reports Section -->
-        <section id="reports" class="glass-card p-8 mx-4 my-8">
-            <h2 class="text-2xl font-bold mb-8 text-center text-white section-title">گزارش عملکرد سالانه شهرستان زرین‌دشت</h2> <!-- تغییر از amber-800 به سفید -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div class="glass-card p-6 rounded-xl pdf-card border border-00cccc">
-                    <div class="flex flex-col items-center text-center">
-                        <i class="fas fa-file-pdf pdf-icon mb-4"></i>
-                        <h3 class="text-xl font-bold mb-2 text-white">گزارش عملکرد سال تحصیلی 1402-1403</h3> <!-- تغییر از amber-700 به سفید -->
-                        <p class="text-gray-500 mb-4">گزارش جامع فعالیت‌های آموزشی و پرورشی هنرستان‌های کامپیوتر شهرستان زرین‌دشت</p>
-                        <a href="https://drive.google.com/file/d/1kgTuGpCg3mjpKZlVtE-HqPl0UCj3q0CH/view?usp=drive_link"
-                           target="_blank"
-                           class="px-4 py-2 bg-00cccc text-white rounded-lg hover:bg-009999 transition">
-                            دانلود گزارش
+                
+                <div class="footer-section">
+                    <h4>نقشه سایت</h4>
+                    <div class="footer-links">
+                        <a href="#team">
+                            <i class="fas fa-users"></i>تیم متخصصان
+                        </a>
+                        <a href="#fields">
+                            <i class="fas fa-code"></i>رشته‌های تخصصی
+                        </a>
+                        <a href="#schools">
+                            <i class="fas fa-school"></i>هنرستان‌ها
+                        </a>
+                        <a href="#resources">
+                            <i class="fas fa-book"></i>منابع آموزشی
+                        </a>
+                        <a href="#support">
+                            <i class="fas fa-headset"></i>پشتیبانی
                         </a>
                     </div>
                 </div>
-                <div class="glass-card p-6 rounded-xl pdf-card border border-00cccc">
-                    <div class="flex flex-col items-center text-center">
-                        <i class="fas fa-file-pdf pdf-icon mb-4"></i>
-                        <h3 class="text-xl font-bold mb-2 text-white">گزارش عملکرد سال تحصیلی 1403-1404</h3> <!-- تغییر از amber-700 به سفید -->
-                        <p class="text-gray-500 mb-4">گزارش جامع فعالیت‌های آموزشی و پرورشی هنرستان‌های کامپیوتر شهرستان زرین‌دشت</p>
-                        <a href="https://drive.google.com/file/d/1VmS2ojUfDgiTjMhguMdUlGNIqgtmNmYm/view?usp=drive_link"
-                           target="_blank"
-                           class="px-4 py-2 bg-00cccc text-white rounded-lg hover:bg-009999 transition">
-                            دانلود گزارش (PDF)
+                
+                <div class="footer-section">
+                    <h4>ارتباط مستقیم</h4>
+                    <div class="footer-links">
+                        <a href="https://t.me/cszarindasht" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-telegram"></i>کانال تلگرام
+                        </a>
+                        <a href="mailto:info@fanamooz-zarin.ir">
+                            <i class="fas fa-envelope"></i>ایمیل پشتیبانی
+                        </a>
+                        <a href="https://wa.me/989372565994" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-whatsapp"></i>واتساپ
+                        </a>
+                        <a href="tel:+989372565994">
+                            <i class="fas fa-phone"></i>۰۹۳۷-۲۵۶-۵۹۹۴
                         </a>
                     </div>
                 </div>
-            </div>
-            <div class="mt-8 text-center">
-                <p class="text-gray-500">شما می‌توانید فایل‌های PDF گزارش‌های عملکرد را در این بخش بارگذاری کنید.</p>
-            </div>
-        </section>
-        
-        <!-- Support Section -->
-        <section id="support" class="glass-card p-8 mx-4 my-8">
-            <h2 class="text-2xl font-bold mb-8 text-center text-white section-title">ارتباط با پشتیبانی</h2> <!-- تغییر از amber-800 به سفید -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div class="glass-card p-6 rounded-xl border border-00cccc">
-                    <div class="flex flex-col items-center text-center">
-                        <i class="fab fa-whatsapp text-4xl text-00cccc mb-4"></i>
-                        <h3 class="text-xl font-bold mb-2 text-white">پشتیبانی از طریق واتساپ</h3> <!-- تغییر از amber-700 به سفید -->
-                        <p class="text-gray-500 mb-4">برای ارتباط مستقیم با پشتیبانی از طریق واتساپ روی دکمه زیر کلیک کنید</p>
-                        <a href="https://wa.me/989372565994?text=سلام%20وقت%20بخیر"
-                           target="_blank"
-                           class="px-6 py-3 rounded-full font-medium whatsapp-btn">
-                            <i class="fab fa-whatsapp ml-2"></i>
-                            ارتباط از طریق واتساپ
-                        </a>
-                    </div>
-                </div>
-                <div class="glass-card p-6 rounded-xl border border-00cccc">
-                    <div class="flex flex-col items-center text-center">
-                        <i class="fab fa-telegram text-4xl text-00cccc mb-4"></i>
-                        <h3 class="text-xl font-bold mb-2 text-white">کانال تلگرام فن آموز زرین</h3> <!-- تغییر از amber-700 به سفید -->
-                        <p class="text-gray-500 mb-4">برای عضویت در کانال تلگرام ما روی دکمه زیر کلیک کنید</p>
-                        <a href="https://t.me/cszarindasht"
-                           target="_blank"
-                           class="px-6 py-3 rounded-full font-medium telegram-btn">
-                            <i class="fab fa-telegram ml-2"></i>
-                            عضویت در کانال تلگرام
-                        </a>
-                    </div>
-                </div>
-                <div class="glass-card p-6 rounded-xl border border-00cccc">
-                    <div class="flex flex-col items-center text-center">
-                        <i class="fas fa-sms text-4xl text-00cccc mb-4"></i>
-                        <h3 class="text-xl font-bold mb-2 text-white">ارتباط از طریق پیامک</h3> <!-- تغییر از amber-700 به سفید -->
-                        <p class="text-gray-500 mb-4">برای تماس از طریق پیامک روی دکمه زیر کلیک کنید</p>
-                        <a href="sms:09372565994"
-                           target="_blank"
-                           class="px-6 py-3 rounded-full font-medium sms-btn">
-                            <i class="fas fa-sms ml-2"></i>
-                            ارسال پیامک
-                        </a>
+                
+                <div class="footer-section">
+                    <h4>رشته‌های تخصصی</h4>
+                    <p>توسعه دهنده پایگاه‌های اینترنتی</p>
+                    <p>تولید محتوای آموزشی الکترونیکی</p>
+                    <p>سیستم‌های هوشمند و AI</p>
+                    <div style="margin-top: 1rem;">
+                        <h5 style="color: var(--accent-color); margin-bottom: 0.5rem;">کلمات کلیدی:</h5>
+                        <p style="font-size: 0.85rem; color: rgba(255,255,255,0.7); line-height: 1.4;">
+                            آموزش کامپیوتر زرین‌دشت، دوره‌های فنی حرفه‌ای، یادگیری برنامه‌نویسی، PHP و MySQL، تولید محتوای دیجیتال
+                        </p>
                     </div>
                 </div>
             </div>
-        </section>
-        
-        <!-- Footer -->
-        <footer class="glass-card p-6 mx-4 mt-8 mb-4">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="mb-4 md:mb-0">
-                    <p class="text-sm text-gray-500">گروه کامپیوتر زرین‌دشت - استان فارس</p>
-                </div>
-                <div class="flex space-x-4 space-x-reverse">
-                    <a href="https://t.me/cszarindasht" target="_blank" class="text-gray-500 hover:text-00cccc">
-                        <i class="fab fa-telegram text-xl"></i>
-                    </a>
-                    <a href="mailto:support@example.com" class="text-gray-500 hover:text-00cccc">
-                        <i class="fas fa-envelope text-xl"></i>
-                    </a>
-                </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; ۱۴۰۳ فن‌آموز زرین - استان فارس | طراحی و توسعه با ❤️ توسط تیم فن‌آموز زرین</p>
+                <p style="margin-top: 0.5rem; font-size: 0.875rem; color: var(--luxury-gold); text-shadow: 0 1px 2px rgba(0,0,0,0.3);">
+                    نویسنده: رعنا پرموزه | مدرسه والفجر<br>
+                    جایی که دانش و تجربه با عشق به پرورش ترکیب می‌شوند ✨
+                </p>
             </div>
-            <div class="mt-6 pt-6 border-t border-00cccc text-center text-sm text-gray-500">
-                <p>توسعه دهنده پایگاه اینترنتی: رشته تولید کننده و توسعه دهنده پایگاه‌های اینترنتی</p>
-                <p class="mt-2">تولید محتوای آموزشی الکترونیک: رشته تولید محتوای آموزشی الکترونیکی</p>
-            </div>
-        </footer>
-    </div>
+        </div>
+    </footer>
 
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const hamburger = document.getElementById('hamburger');
-            const mobileMenu = document.getElementById('mobileMenu');
-            const closeMenu = document.getElementById('closeMenu');
-
-            if (hamburger && mobileMenu && closeMenu) {
-                hamburger.addEventListener('click', () => {
-                    hamburger.classList.toggle('active');
-                    mobileMenu.classList.toggle('active');
+        // Smooth scroll for internal links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
                 });
+            });
+        });
 
-                closeMenu.addEventListener('click', () => {
-                    hamburger.classList.remove('active');
-                    mobileMenu.classList.remove('active');
-                });
+        // Add loading animation to elements when they come into view
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
 
-                document.addEventListener('click', (event) => {
-                    if (mobileMenu.classList.contains('active') && !mobileMenu.contains(event.target) && !hamburger.contains(event.target)) {
-                        hamburger.classList.remove('active');
-                        mobileMenu.classList.remove('active');
-                    }
-                });
-            }
-
-            function navigateToSection(sectionId) {
-                const hamburger = document.getElementById('hamburger');
-                const mobileMenu = document.getElementById('mobileMenu');
-                if (hamburger && mobileMenu) {
-                    hamburger.classList.remove('active');
-                    mobileMenu.classList.remove('active');
-                    setTimeout(() => {
-                        document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
-                    }, 100);
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
                 }
-            }
+            });
+        }, observerOptions);
 
-            function createMeteors() {
-                const container = document.getElementById('meteors-container');
-                const count = 10;
-                for (let i = 0; i < count; i++) {
-                    const meteor = document.createElement('div');
-                    meteor.className = 'meteor';
-                    meteor.style.left = `${Math.random() * 100}vw`;
-                    meteor.style.animationDelay = `${Math.random() * 10}s`;
-                    meteor.style.animationDuration = `${3 + Math.random() * 5}s`;
-                    container.appendChild(meteor);
+        // Observe all cards and sections
+        document.querySelectorAll('.field-card, .school-card, .team-category, .resource-category, .support-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'all 0.6s ease';
+            observer.observe(el);
+        });
+
+        // Mobile menu functionality
+        function toggleMobileMenu() {
+            const mobileNav = document.getElementById('mobileNav');
+            mobileNav.classList.toggle('active');
+            
+            // Prevent body scroll when menu is open
+            if (mobileNav.classList.contains('active')) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.mobile-nav-item a').forEach(link => {
+            link.addEventListener('click', () => {
+                toggleMobileMenu();
+            });
+        });
+
+        // Add hover effects for better interactivity
+        document.querySelectorAll('.resource-item, .course-list li, .team-list li').forEach(item => {
+            item.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateX(-4px)';
+            });
+            
+            item.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateX(0)';
+            });
+        });
+
+        // Project cards hover effects
+        document.querySelectorAll('.project-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-4px)';
+                this.style.borderColor = 'var(--dark-blue)';
+                this.style.boxShadow = 'var(--shadow-medium)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+                this.style.borderColor = 'var(--pure-white)';
+                this.style.boxShadow = 'var(--shadow-light)';
+            });
+        });
+
+        // Challenge cards hover effects
+        document.querySelectorAll('.challenge-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-4px)';
+                this.style.borderColor = 'var(--dark-blue)';
+                this.style.boxShadow = 'var(--shadow-medium)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+                this.style.borderColor = 'var(--pure-white)';
+                this.style.boxShadow = 'var(--shadow-light)';
+            });
+        });
+
+        // Blog cards hover effects
+        document.querySelectorAll('.blog-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-4px)';
+                this.style.borderColor = 'var(--dark-blue)';
+                this.style.boxShadow = 'var(--shadow-medium)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+                this.style.borderColor = 'var(--pure-white)';
+                this.style.boxShadow = 'var(--shadow-light)';
+            });
+        });
+
+        // Gallery items hover effects
+        document.querySelectorAll('.gallery-item').forEach(item => {
+            item.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-4px)';
+                this.style.borderColor = 'var(--dark-blue)';
+                this.style.boxShadow = 'var(--shadow-medium)';
+            });
+            
+            item.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+                this.style.borderColor = 'var(--light-gray)';
+                this.style.boxShadow = 'var(--shadow-light)';
+            });
+        });
+
+        // Event cards hover effects
+        document.querySelectorAll('.event-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-4px)';
+                this.style.borderColor = 'var(--dark-blue)';
+                this.style.boxShadow = 'var(--shadow-medium)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+                this.style.borderColor = 'var(--pure-white)';
+                this.style.boxShadow = 'var(--shadow-light)';
+            });
+        });
+
+        // Parallax scrolling effect for hero
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const parallax = document.querySelector('.hero-parallax');
+            if (parallax) {
+                const speed = scrolled * 0.5;
+                parallax.style.transform = `translateY(${speed}px)`;
+            }
+        });
+
+        // Dark Mode Toggle Functionality
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+        
+        // Check for saved dark mode preference
+        const isDarkMode = localStorage.getItem('darkMode') === 'true';
+        if (isDarkMode) {
+            body.classList.add('dark-mode');
+            darkModeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        }
+        
+        darkModeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            const isDark = body.classList.contains('dark-mode');
+            
+            // Update button icon
+            darkModeToggle.innerHTML = isDark ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+            
+            // Save preference
+            localStorage.setItem('darkMode', isDark);
+        });
+
+        // Property cards hover effects
+        document.querySelectorAll('.property-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-4px)';
+                this.style.borderColor = 'var(--dark-blue)';
+                this.style.boxShadow = 'var(--shadow-medium)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+                this.style.borderColor = 'var(--light-gray)';
+                this.style.boxShadow = 'var(--shadow-card)';
+            });
+        });
+
+        // Registration form functionality
+        document.getElementById('registrationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const firstName = document.getElementById('firstName').value;
+            const lastName = document.getElementById('lastName').value;
+            const phone = document.getElementById('phone').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            
+            const formMessage = document.getElementById('formMessage');
+            
+            // Simple validation
+            if (!firstName || !lastName || !phone || !email) {
+                formMessage.style.display = 'block';
+                formMessage.style.background = 'linear-gradient(135deg, #FF6B35 0%, #F7931E 100%)';
+                formMessage.style.color = 'white';
+                formMessage.innerHTML = '<i class="fas fa-exclamation-triangle"></i> لطفاً تمام فیلدهای ضروری را پر کنید.';
+                return;
+            }
+            
+            // Success message
+            formMessage.style.display = 'block';
+            formMessage.style.background = 'var(--green-gradient)';
+            formMessage.style.color = 'white';
+            formMessage.innerHTML = '<i class="fas fa-check-circle"></i> ثبت نام شما با موفقیت انجام شد! به زودی با شما تماس خواهیم گرفت.';
+            
+            // Clear form
+            this.reset();
+            
+            // Hide message after 5 seconds
+            setTimeout(() => {
+                formMessage.style.display = 'none';
+            }, 5000);
+        });
+
+        // AI Assistant functionality
+        const aiResponses = {
+            // Greetings
+            'سلام': 'سلام و درود! 🌟 من دستیار هوش مصنوعی فن‌آموز زرین هستم. چه کمکی از دستم برمیاد؟',
+            'صبح بخیر': 'صبح شما بخیر! ☀️ امیدوارم روز خوبی داشته باشید. چطور می‌تونم راهنماییتون کنم؟',
+            'عصر بخیر': 'عصر شما بخیر! 🌅 خوشحالم که با شما صحبت می‌کنم. چه سوالی دارید؟',
+            'شب بخیر': 'شب شما بخیر! 🌙 حتی شب‌ها هم در خدمتتون هستم. چطور می‌تونم کمک کنم؟',
+            'احوال': 'ممنون که پرسیدید! 😊 من همیشه آماده کمک به شما هستم. شما چطورید؟ چه کاری برایتان انجام بدم؟',
+            'خوبی': 'بله خیلی خوبم، ممنون! 💙 امیدوارم شما هم حالتون عالی باشه. چه کمکی نیاز دارید؟',
+            
+            // About the author
+            'نویسنده': 'این سایت فوق‌العاده توسط رعنا پرموزه، دانش‌آموز با استعداد مدرسه والفجر نوشته شده! 👩‍💻✨ ایشون با عشق و تلاش زیادی این پلتفرم رو برای همه دانش‌آموزان عزیز ساختن.',
+            'رعنا': 'رعنا پرموزه نویسنده و طراح این سایت زیباست! 🌟 ایشون دانش‌آموز مدرسه والفجر هستن و با مهارت بالا این پلتفرم آموزشی رو برای همه ما ساختن.',
+            'پرموزه': 'بله! رعنا پرموزه نویسنده این سایت هست. ایشون با تخصص و علاقه زیادی این کار رو انجام دادن. 💪',
+            
+            // About fields
+            'رشته': 'ما دو رشته فوق‌العاده داریم: 🔥\n1️⃣ تولید‌کننده و توسعه‌دهنده پایگاه‌های اینترنتی (برنامه‌نویسی وب)\n2️⃣ تولید محتوای آموزشی الکترونیکی (طراحی و ملتی‌مدیا)\nکدوم بیشتر علاقه‌تون رو جلب می‌کنه؟',
+            'برنامه نویسی': 'برنامه‌نویسی دنیای شگفت‌انگیزیه! 💻 تو رشته توسعه وب ما HTML, CSS, JavaScript, PHP و MySQL یاد می‌گیرید. از صفر تا حرفه‌ای!',
+            'وب': 'توسعه وب یکی از پرطرفدارترین رشته‌هاست! 🌐 شما می‌تونید وبسایت‌های زیبا و کاربردی بسازید. علاقه‌مندید؟',
+            'محتوا': 'تولید محتوا هنر آینده‌ست! 🎨 با Adobe Premiere, Photoshop, Animate و ابزارهای مدرن محتوای خلاقانه بسازید.',
+            
+            // About schools
+            'هنرستان': 'ما ۴ هنرستان عالی داریم: 🏫\n🔹 زینب کبری (مدیر: فاطمه بروانیا)\n🔹 والفجر (مدیر: زهرا پوررستمی) \n🔹 شهید پاکیزه خو (مدیر: فاطمه تروال)\n🔹 شهید باهنر (مدیر: عباس امیری)\nکدوم رو می‌خواید بیشتر بدونید؟',
+            'زینب': 'هنرستان زینب کبری یکی از بهترین‌هاست! 🌟 رشته‌های وب، محتوا و طراحی لباس داره. مدیرش خانم فاطمه بروانیا هستن.',
+            'والفجر': 'مدرسه والفجر جای خاصیه! 💎 همونجا که نویسنده این سایت (رعنا پرموزه) درس می‌خونه. رشته‌های محتوا و حسابداری داره.',
+            
+            // About resources
+            'منابع': 'منابع ما فوق‌العاده‌ان! 📚 شامل:\n📖 کتاب‌های کاردانش رسمی\n📝 جزوات تخصصی\n🤖 ابزارهای هوش مصنوعی پیشرفته\n🌐 پلتفرم‌های آنلاین معتبر\nکدوم بیشتر نیاز دارید؟',
+            'کتاب': 'کتاب‌های ما از دفتر تألیف و چاپ کتب درسی هستن و کاملاً رسمی و معتبرن! 📚✅',
+            'هوش مصنوعی': 'ابزارهای AI ما شامل ChatGPT, Gemini, Claude, Midjourney, Adobe Firefly و خیلی بیشتر! 🤖⚡ آینده با هوش مصنوعیه!',
+            
+            // Contact info
+            'تماس': 'راه‌های ارتباطی ما: 📞\n📱 واتساپ: ۰۹۳۷۲۵۶۵۹۹۴\n📢 تلگرام: @cszarindasht\n✉️ ایمیل: info@fanamooz-zarin.ir\nهر وقت نیاز داشتید در خدمتیم!',
+            'واتساپ': 'واتساپ ما: ۰۹۳۷۲۵۶۵۹۹۴ 📱 مستقیماً پیام بدید، سریع جواب می‌دیم!',
+            'تلگرام': 'کانال تلگرام ما: @cszarindasht 📢 حتماً عضو بشید تا از آخرین اخبار باخبر بشید!',
+            
+            // Registration
+            'ثبت نام': 'ثبت نام خیلی راحته! 📝 فرم بالای همین صفحه رو پر کنید یا مستقیماً با ۰۹۳۷۲۵۶۵۹۹۴ تماس بگیرید. ما منتظریم! 🤗',
+            
+            // Challenges
+            'چالش': 'چالش‌های هفتگی ما عالین! 🏆 الان چالش ساخت وبسایت شخصی و تولید ویدیو آموزشی فعاله. شرکت می‌کنید؟',
+            
+            // About website
+            'سایت': 'این سایت با عشق و تلاش رعنا پرموزه از مدرسه والفجر ساخته شده! 💝 مخصوص دانش‌آموزان عزیز استان فارس - زرین‌دشت طراحی شده.',
+            'زرین دشت': 'زرین‌دشت شهر زیبای ما تو استان فارسه! 🌸 اینجا مرکز تعالی آموزشی فن‌آموز زرین فعالیت می‌کنه.',
+            
+            // Motivational
+            'ممنون': 'خواهش می‌کنم! 😊 خوشحالم که تونستم کمکتون کنم. سوال دیگه‌ای دارید؟',
+            'متشکرم': 'قابلی نداره! 🙏 همیشه در خدمتتون هستم. موفق باشید!',
+            'عالی': 'خیلی خوشحالم که راضی هستید! 🌟 اگه سوال دیگه‌ای داشتید، بپرسید.',
+            
+            // Default response
+            'default': 'سوال جالبی پرسیدید! 🤔 من سعی می‌کنم بهترین پاسخ رو بدم، ولی برای اطلاعات دقیق‌تر با شماره ۰۹۳۷۲۵۶۵۹۹۴ تماس بگیرید. تیم ما آماده راهنماییتون هست! 💪'
+        };
+
+        function getAIResponse(userMessage) {
+            const message = userMessage.toLowerCase();
+            
+            for (let key in aiResponses) {
+                if (message.includes(key)) {
+                    return aiResponses[key];
                 }
             }
             
-            function toggleAccordion(header) {
-                const content = header.nextElementSibling;
-                const icon = header.querySelector('i');
-                const accordionItems = header.closest('.glass-card').querySelectorAll('.accordion-item');
+            return aiResponses['default'];
+        }
 
-                if (content && icon) {
-                    accordionItems.forEach(item => {
-                        const itemContent = item.querySelector('.accordion-content');
-                        const itemIcon = item.querySelector('.accordion-header i');
-                        if (itemContent !== content) {
-                            itemContent.classList.remove('show');
-                            itemIcon.style.transform = 'rotate(0deg)';
-                        }
-                    });
-                    content.classList.toggle('show');
-                    icon.style.transform = content.classList.contains('show') ? 'rotate(180deg)' : 'rotate(0deg)';
-                }
+        function addMessage(message, isUser = false) {
+            const chatMessages = document.getElementById('chatMessages');
+            const messageDiv = document.createElement('div');
+            
+            if (isUser) {
+                messageDiv.style.cssText = 'background: rgba(255,255,255,0.8); color: black; padding: 1rem; border-radius: 15px; margin-bottom: 1rem; max-width: 80%; margin-right: auto; margin-left: 20%; text-align: right; border: 2px solid rgba(255,255,255,0.3);';
+                messageDiv.innerHTML = `<strong>شما:</strong> ${message}`;
+            } else {
+                messageDiv.style.cssText = 'background: rgba(255,255,255,0.9); color: black; padding: 1rem; border-radius: 15px; margin-bottom: 1rem; max-width: 80%; border: 2px solid rgba(255,255,255,0.3);';
+                messageDiv.innerHTML = `<strong>دستیار زرین:</strong> ${message}`;
             }
+            
+            chatMessages.appendChild(messageDiv);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
 
-            createMeteors();
+        document.getElementById('sendButton').addEventListener('click', function() {
+            const userInput = document.getElementById('userInput');
+            const message = userInput.value.trim();
+            
+            if (message) {
+                addMessage(message, true);
+                
+                setTimeout(() => {
+                    const response = getAIResponse(message);
+                    addMessage(response);
+                }, 1000);
+                
+                userInput.value = '';
+            }
         });
+
+        document.getElementById('userInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                document.getElementById('sendButton').click();
+            }
+        });
+
+        // Blog article functions
+        function showFullArticle(articleId) {
+            document.getElementById(articleId + '-preview').style.display = 'none';
+            document.getElementById(articleId + '-full').style.display = 'block';
+        }
+
+        function hideFullArticle(articleId) {
+            document.getElementById(articleId + '-preview').style.display = 'block';
+            document.getElementById(articleId + '-full').style.display = 'none';
+        }
     </script>
-</body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'985b5758f3028cea',t:'MTc1ODk3OTY3NS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
